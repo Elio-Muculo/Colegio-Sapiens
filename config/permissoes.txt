@@ -1,9 +1,9 @@
 As permissões que cada perfil tem
 
-use
-    0 « administrador sistema
-    1 « professor
-    2 « encarregado
+use como perfil
+    administrador sistema
+    professor
+    encarregado
 
 
 
