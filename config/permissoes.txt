@@ -1,0 +1,14 @@
+As permissões que cada perfil tem
+
+use
+    0 « administrador sistema
+    1 « professor
+    2 « encarregado
+
+
+
+os estados dos perfis
+
+use 
+    0 - conta desativada
+    1 - conta activada
