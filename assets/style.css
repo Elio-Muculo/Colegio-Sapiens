@@ -27,15 +27,28 @@
   height: 100%; 
 }
 
+
 .texto{
- color: #3E9178
+ color: #3E9178;
 }
 
 .botao{
-width: 60px;
-height: 50px;
+width: 50px;
+height: 40px;
 border: 2px solid #3E9178;
-border-radius: 20px;
+border-radius: 12px;
+}
+
+.btn{
+  color:#3E9178 !important;
+}
+.btn a{
+  text-decoration: none;
+  color:#3E9178;
+}
+
+.btn a:hover{
+  color: #3E9178;
 }
 /* **************DashboardProfessor**************** */
 .header{
@@ -101,6 +114,13 @@ img{
   height: 70px;
 }
 
+.imgPrincipal {
+  background-color: #d9d9d9;
+   height: 90vh; 
+  background-image: url(../assets/img/grafico.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
