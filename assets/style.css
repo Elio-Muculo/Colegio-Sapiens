@@ -1,0 +1,55 @@
+/* Tela CadastroUser */
+.telaP {
+  background-color: #d9d9d9;
+  height: 100vh;
+}
+
+.centro{
+  height: 100% !important;
+  width: 100% !important;
+}
+.w-40{
+  width: 100%;
+}
+
+.telaVerde{
+  background-color: #3E9178;
+  height: 100vh;
+}
+
+.logo{
+    width: 100%;
+    height: 30%;
+    border-bottom: .1rem #fff solid;
+}
+.img{
+  width: 100%;
+  height: 100%; 
+}
+
+.texto{
+ color: #3E9178
+}
+
+.botao{
+width: 60px;
+height: 50px;
+border: 2px solid #3E9178;
+border-radius: 20px;
+}
+/* **************DashboardProfessor**************** */
+.header{
+  background:#3E9178;
+  height: 30px;
+  line-height: 2px;
+  border-bottom: .1rem #fff solid;
+}
+
+.items{
+position: absolute;
+width: 250px;
+height: 44px;
+border: 2px solid #FFFFFF;
+border-radius: 5px
+}
+
