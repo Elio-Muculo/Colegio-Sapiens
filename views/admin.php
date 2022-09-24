@@ -58,7 +58,7 @@
                         <a  href ="formularioEncarregado.php" class="btn btn-menu"><i class="fas fa-download me-2"></i> Cadastrar Encarregado</a>
                     </div>
                     <div class="mt-5 p-5">
-                        <a href="/index.php" class="btn btn-menu mt-5"><i class="fas fa-download me-2"></i>Sair</a>
+                        <a href="" class="btn btn-menu mt-5"><i class="fas fa-download me-2"></i>Sair</a>
                     </div>
                 </div>
             </div>
