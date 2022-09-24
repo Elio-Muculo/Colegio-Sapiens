@@ -25,15 +25,20 @@
                                 <p>Nome do Professor<i class="fas fa-user"></i></p>
                                 
                         </div>
-                        <div class="menu py-3 ">
-                            <h4 class="mt-5 text-white p-2">Selecione uma op&ccedil;&atilde;o</h4>
-                            
-                            <div class="items d-flex flex-column  mb-3 col-3 pe-0">
-                                <!-- <button type="button" class="btn btn-primary btn-md my-3">Large button</button>
-                                <button type="button" class="btn btn-primary btn-md my-3">Large button</button>
-                                <button type="button" class="btn btn-primary btn-lg my-3">Large button</button>
-                                <button type="button" class="btn btn-primary btn-lg my-3">Large button</button>
-                                <button type="button" class="btn btn-primary btn-lg my-3">Large button</button> -->
+                        <div class="menu py-2 ">
+                            <h5 class="mt-5 text-white ms-3 p-3">Selecione uma op&ccedil;&atilde;o</h5>
+                            <div class="links">
+                                 <a href="#" ><i class="fas fa-user">Agendar reuniao</i></a>
+                                 <a href="#" >Lancar notas</a>
+                                 <a href="#" >Visualizar dados</a>
+                                 <a href="#" >Solicitar reuniao</a>
+                                 <a href="#" >Agendar reuniao</a>
+                                 <a href="#" >Confirmar reuniao</a>
+                                 
+                            </div>
+
+                            <div class="logout">
+                            <a href="#" class="logout">Sair</a>
                             </div>
                         </div>
                     </div>
@@ -44,6 +49,23 @@
              </div>
 
                     <div class="telaP col-md-9 col-lg-9 col-sm-12 px-auto mx-auto">
+                        
+                    <div class="container mtop">
+                        <div class="row">
+                        <div class="col text-center">
+                        <img src="../assets/img/WhatsApp Image 2022-09-23 at 23.44.29.jpeg" alt="" class="img-fluid">
+                        </div>
+
+                        <div class="col text-center">
+                        <img src="../assets/img/WhatsApp Image 2022-09-23 at 23.44.32.jpeg" alt="" class="img-fluid">
+                        </div>
+
+                        <div class="col text-center">
+                        <img src="../assets/img/WhatsApp Image 2022-09-23 at 23.44.34.jpeg" alt="" class="img-fluid">
+                        </div>
+                        </div>
+                    </div>
+
                         
                     </div>
                 </div>-

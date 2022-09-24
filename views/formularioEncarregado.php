@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="telaP col-md-9 col-lg-9 col-sm-12 px-auto mx-auto">
-                        <h1 class="texto text-center mt-4">Formul&aacute;rio do Educando</h1>
+                        <h1 class="texto text-center mt-4">Formul&aacute;rio do Encarregado</h1>
                         <form action="controller/" method="post" class=" row">
                                 <p>Preencha os Campos</p>
 
