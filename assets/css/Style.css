@@ -1,0 +1,94 @@
+/* login e professor*/
+
+.title {
+    color: #337460;
+}
+
+.info {}
+
+.left {
+    background-color: #337460;
+    border-radius: 1rem 0 0 0;
+}
+
+.box {
+    background-color: #f0efef;
+}
+
+.text-p {
+    font-style: italic;
+    font-size: 12pt;
+}
+.form-check-input:checked{
+    background-color: #3E9178 !important;
+    border-color: #3E9178 !important;}
+.img {
+    width: 100%;
+    height: 200px;
+}
+
+.logo {
+    border-bottom: #fff .1rem solid;
+}
+
+.inputs {
+    background-color: #CCC8C7;
+    padding: .4rem 0 .4rem 2rem !important;
+}
+
+.form {
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+}
+
+.form-select {
+    color: #337460;
+    padding-left: 2rem;
+}
+
+.w-4 {
+    width: 200px !important;
+}
+
+.text-color {
+    color: #8c8a8a;
+}
+
+.form-control,
+.form-select {
+    background-color: #CCC8C7 !important;
+    transition: none;
+    border: none !important;
+    outline: 0 !important;
+}
+#btnlog{
+
+    background-color: #3E9178 !important;
+    border-radius: 15px;
+    width: 30%;
+    
+    }
+.form-control:focus,
+.form-select:focus {
+    border: none;
+    box-shadow: none;
+    outline: 0 !important;
+    background-color: #CCC8C7 !important;
+}
+
+.icon {
+    color: #337460;
+}
+
+#linklog{
+color: black;
+
+}
+
+.botoesprf{
+
+    
+    border-radius: 8px !important;
+    width: 20% !important;
+
+} 

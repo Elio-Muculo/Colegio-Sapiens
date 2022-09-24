@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <title>Administrador</title>
+</head>
+
+<body class="body">
+    <nav class="navbar navbar-expand-lg bg-nav">
+        <div class="container-fluid">
+            <!--offcanvas trigger-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+             <span> <i class="fas fa-bars"></i></span>
+            </button>
+            <!--offcanvas trigger-->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span> <i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="#" role="button">
+                            Administrador <i class="fas fa-user"></i>
+                        </a>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!--o menu lateral comeca aqui-->
+    <div>
+
+        <div class="offcanvas offcanvas-start sidebar-nav bg-sidebar nav" tabindex="-1" id="sidebar">
+
+            <div class="offcanvas-body p-0">
+                <div class="fechar">
+                    <button class="btn float-end text-white btn-fechar px-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        <span><i class="fas fa-times"></i></span>
+                       </button>
+
+                </div>
+                <div class="p-0 mt-5">
+                    <div class="text-white text-center">Selecione uma opcao</div>
+                    <div class="p-4 text-center">
+                        <a class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
+                        <a class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
+                        <a class="btn btn-menu"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
+                    </div>
+                    <div class="mt-5 p-5">
+                        <a class="btn btn-menu mt-5"><i class="fas fa-download me-2"></i>Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fim do menu lateral-->
+
+    <!--o conteudo da pagina fica aqui-->
+    <main class="p-2">
+    <img src="../assets/img/admin.jpeg" alt=""  width="100%" class="img">
+    </main>
+
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/all.min.js"></script>
+</body>
+
+</html>
