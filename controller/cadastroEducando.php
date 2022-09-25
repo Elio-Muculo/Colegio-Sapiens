@@ -9,18 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     /**
      * dados do enducando vindo do input's
     */
-    $dadosEnducando = [
+    $dadosEducando = [
         'nome' => $_POST['nome'], 
         'apelido' => $_POST['apelido'], 
-        'encarregado_id' => $_POST['telefone'], 
+        'encarregado_id' => $_POST['encarregado_id'], 
         'data_nascimento' => $_POST['data_nascimento'],
-        'genero' => $_POST['data_nascimento'],
+        'genero' => $_POST['genero'],
         'bairro' => $_POST['bairro'], 
         'quarteirao' => $_POST['quarteirao'],
-        'turma_id' => $id['codigo']
+        'turma_id' => $_POST['turma_id']
     ];
     
-    $inserted = insertAll("INSERT INTO enducando (nome, apelido, encarregado_id, data_nascimento, genero, bairro, quarteirao, turma_id) VALUES (:nome, :apelido, :encarregado_id, :data_nascimento, :genero, :bairro, :quarteirao, :turma_id)", $dadosEnducando);
+    $inserted = insertAll("INSERT INTO educando (nome, apelido, encarregado_id, data_nascimento, genero, bairro, quarteirao, turma_id) VALUES (:nome, :apelido, :encarregado_id, :data_nascimento, :genero, :bairro, :quarteirao, :turma_id)", $dadosEducando);
     die($inserted);
     if ($inserted == 1) {
         die("dado inserido com sucesso");
