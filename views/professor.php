@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/Style.css">
-    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/cssgeral/dadiva/logprof.css">
+    <link rel="stylesheet" href="../assets/cssgeral/dadiva/all.min.css">
     <title>Cadastro Professor</title>
 </head>
 
@@ -22,7 +22,8 @@
                 <div class="info d-sm-none d-md-block">
 
                     <div class="">
-                        <p class="p-4 text-center text-white text-p ">Mantenha-se actualizado <br> sobre as noticias da<br> Escola e a informacao<br> do seu educando</p>
+                        <p class="p-4 text-center text-white text-p ">O cadastro no sistema <br> n&atilde;o permitira o cesso a<br> nenhum dado sigiloso do<br> usuario,e n&atilde;o sera <br>
+                    utilizada nenhuma<br> Informa&ccedil;&atilde;o do login e <br >senha do mesmo para se <br> conectar em seu nome e  <br> publicar qualquer <br> conteudo por ele</p>
                     </div>
                 </div>
             </div>
@@ -30,10 +31,10 @@
                 <div class="title text-center fs-1 ">
                     Formulario do Professor
                 </div>
-                <form action="" class="p-4 form">
+                <form action="../controller/Cadastro_professor"  method ="POST" class="p-4 form">
                     <div class="text-color">Preencha os campos</div>
                     <div class="input-group mb-2">
-                        <span class="input-group-text inputs"><i class="fas fa-user icon"></i></span>
+                        <span class="input-group-text inputs"><i class="fas fa-user-circle icon"></i></span>
                         <input type="text" name="nome" class="form-control inputs" placeholder="Nome (UserName) *">
                     </div>
                     <div class="input-group mb-2">
@@ -61,7 +62,7 @@
                         <input type="text" name="experiencia" class="form-control inputs" placeholder="Experiencia">
                     </div>
                     <div class="input-group mb-4 w-4">
-                        <span class="input-group-text inputs"><i class="fas fa-genderless icon"></i></span>
+                        <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-venus-mars icon"></i></span>
                         <select name="genero" id="" class="form-select">
                             <option value="0">Genero</option>
                             <option value="M">Masculino</option>
@@ -73,6 +74,9 @@
                     </div>
                     
                     <div class="group mb-3">
+
+                    <a class="  botoesprf  btn btn-sm btn-outline-success me-2"  href="../views/admin.php"> Voltar</a>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                  <button type="reset" class="  botoesprf  btn btn-sm btn-outline-success me-2"  > Canselar</button> 
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                       <button type="submit" class="  botoesprf  btn btn-sm btn-outline-success me-2" > Guardar </button>
@@ -82,8 +86,8 @@
             </div>
         </div>
     </div>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/all.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/cssgeral/dadiva/all.min.js"></script>
 </body>
 
 </html>

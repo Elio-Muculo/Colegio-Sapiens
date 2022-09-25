@@ -4,8 +4,6 @@
     color: #337460;
 }
 
-.info {}
-
 .left {
     background-color: #337460;
     border-radius: 1rem 0 0 0;
@@ -65,7 +63,7 @@
 
     background-color: #3E9178 !important;
     border-radius: 15px;
-    width: 30%;
+    width: 35%;
     
     }
 .form-control:focus,
