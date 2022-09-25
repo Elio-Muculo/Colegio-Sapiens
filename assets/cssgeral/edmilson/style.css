@@ -1,5 +1,31 @@
-
 /* Agendar reunião */
+
+.alinhamento{
+  width: 100%;
+  height: 25px;
+  position: relative;
+  background-color: #3E9178;
+   color: white;
+
+
+}
+.alinhamento1{
+  margin-top: 0%;
+  position: relative;
+  margin-left: 18%;
+
+}
+.alinhamento2{
+ align-self: center;
+
+}
+.alinhamnento4{
+  float: left;
+
+}
+.alinhamento3{
+  float: right;
+}
 
 h1{
 
@@ -8,30 +34,28 @@ h1{
   
   }
   h5{
-        color: white;
+       
         position: absolute;
   }
+
   h6{
       text-align: right;
-
-
+    
   }
 
 
 
-  .agendar{
+.agendar{
 
-text-align: left;
+          text-align: left;
 
-position: absolute;
+          position: absolute;
 
 
   }
 
-  .cancelar{
-
-
-text-align: right;
+.cancelar{
+            text-align: right;
 
   }
 
@@ -39,3 +63,15 @@ text-align: right;
       color: #cec9c9;
   }
 
+  .telaP {
+    background-color: #d9d9d9;
+ 
+   
+  
+  }
+  .botao{
+    width: 20%;
+    height: 50px;
+    border: 2px solid #3E9178;
+    border-radius: 20px;
+    }
