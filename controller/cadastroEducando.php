@@ -21,16 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ];
     
     $inserted = insertAll("INSERT INTO educando (nome, apelido, encarregado_id, data_nascimento, genero, bairro, quarteirao, turma_id) VALUES (:nome, :apelido, :encarregado_id, :data_nascimento, :genero, :bairro, :quarteirao, :turma_id)", $dadosEducando);
-    die($inserted);
     if ($inserted == 1) {
         die("dado inserido com sucesso");
-        $_SESSION['conta'] = $numero_conta;
-        header('Location: ../views/index.php');
+        header('Location: ../views/admin.php');
         die("dado inserido com sucesso");
     } else {
         $error[] = "<p>Os dados não foram inseridos</p>";
         $_SESSION['error'] = $error;
-        header('Location: ../views/formularioEncarregado');
+        header('Location: ../views/cadastroEducando.php');
         die();
     }
 }

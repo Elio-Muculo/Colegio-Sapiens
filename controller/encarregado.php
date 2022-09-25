@@ -41,13 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         insertAll("INSERT INTO encarregado (nome, apelido, telefone, bairro, quarteirao, email, genero, data_nascimento, user_id) VALUES (:nome, :apelido, :telefone, :bairro, :quarteirao, :email, :genero, :data_nascimento, :user_id)", $dadosEncarregado);
         die("dado inserido com sucesso");
-        $_SESSION['conta'] = $numero_conta;
-        header('Location: ../views/index.php');
+        header('Location: ../views/formularioEncarregado.php');
         die("dado inserido com sucesso");
     } else {
         $error[] = "<p>Os dados não foram inseridos</p>";
         $_SESSION['error'] = $error;
-        header('Location: ../views/formularioEncarregado');
+        header('Location: ../views/formularioEncarregado.php');
         die();
     }
 }
