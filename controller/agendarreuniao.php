@@ -1,4 +1,5 @@
 <?php 
+session_start();
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -12,7 +13,6 @@ require '../vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 
-session_start();
 require_once '../config/crud.php';
 
 $professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SESSION['user_id']]);
@@ -68,15 +68,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            echo 'Message has been sent';
+            echo "<script>location.href='../views/admin.php';</script>";
+            die("dado inserido com sucesso");
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-
-
-        die("dado inserido com sucesso");
-        header('Location: ../views/admin.php');
-        die("dado inserido com sucesso");
     } else {
         $error[] = "<p>Os dados não foram inseridos</p>";
         $_SESSION['error'] = $error;
