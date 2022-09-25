@@ -8,9 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $msg = [];
 
     //dados user do professor vindo dos inputs
+    $password = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     $user = [
         'username' => $_POST['nome'],
-        'senha' => password_hash($_POST['senha'], PASSWORD_BCRYPT),
+        'senha' => $password,
         'perfil' => 'professor',
         'estado' => 1,
 
@@ -22,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (insertAll($sqlUser, $user)) {
 
         //pega os dados user do professor recem registrado
-        $id = readOne("SELECT codigo FROM Usuario ORDER BY codigo DESC LIMIT 1");
+        $id = readOne("SELECT codigo FROM usuario ORDER BY codigo DESC LIMIT 1");
 
         //dados pessoais vindo dos inputs
         $dadosPessoais = [

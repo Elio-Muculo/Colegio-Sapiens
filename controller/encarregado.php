@@ -5,13 +5,14 @@ require_once '../config/crud.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = [];
+    $password = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
     /**
      * dados do encarregado para criar a conta
      */
     $dadosEncarregadoUser = [
         'username' => $_POST['nome'],
-        'senha' => password_hash("123456", PASSWORD_BCRYPT),
+        'senha' => $password,
         'perfil' => "encarregado",
         'estado' => 1,
     ];

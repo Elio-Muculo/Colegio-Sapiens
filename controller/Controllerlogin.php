@@ -17,14 +17,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($usuarioExiste > 0) {
         //pega os dados do usuario existente
         $dados = readOne($sql, $data);
-        
+    
         //senha vinda da bd
+
         $senhaUser = $dados['senha'];
 
         // verifica se a senha da Db e igual inserida e retorna a senha caso verdade
         // retorna null caso senhas incompativeis
         $senhaVerificada = password_verify($senha, $senhaUser) ? $senhaUser : null;
-        
+
         //se retornar null da senha significa senhas diferentes
         // retornar para login com messagem de senhas erradas
         if ($senhaVerificada != null) {
