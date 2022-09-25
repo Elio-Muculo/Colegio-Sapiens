@@ -53,12 +53,12 @@
                 <div class="p-0 mt-5">
                     <div class="text-white text-center">Selecione uma opcao</div>
                     <div class="p-4 text-center">
-                        <a class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
-                        <a class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
-                        <a class="btn btn-menu"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
+                        <a href="professor.php"  class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
+                        <a href="cadastroEducando.php"  class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Educando</a>
+                        <a  href ="formularioEncarregado.php" class="btn btn-menu"><i class="fas fa-download me-2"></i> Cadastrar Encarregado</a>
                     </div>
                     <div class="mt-5 p-5">
-                        <a class="btn btn-menu mt-5"><i class="fas fa-download me-2"></i>Sair</a>
+                        <a href="" class="btn btn-menu mt-5"><i class="fas fa-download me-2"></i>Sair</a>
                     </div>
                 </div>
             </div>

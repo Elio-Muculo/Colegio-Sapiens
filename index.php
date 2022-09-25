@@ -50,7 +50,7 @@
                 </form>
                 <div class="text-center mb-4">
                 
-               <button type="submit" value="Entrar" class="btn btn-primary" id="btnlog"> Login</button>
+               <button type="submit" value="Entrar" class="btn btn-primary" id="btnlog"><i class="fas fa-key ic"></i> Login</button>
    
 
                 </div>

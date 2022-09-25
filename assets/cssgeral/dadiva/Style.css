@@ -76,6 +76,31 @@
     background-color: #CCC8C7 !important;
 }
 
+.alinhamento{
+  width: 100%;
+  height: 30px;
+  position: relative;
+  background-color: #3E9178;
+   color: white;
+}
+.alinhamento1{
+  margin-top: 0%;
+  position: relative;
+  margin-left: 18%;
+
+}
+.alinhamento2{
+ align-self: center;
+
+}
+.alinhamnento4{
+  float: left;
+}
+.alinhamento3{
+  float: right;
+}
+
+
 .icon {
     color: #337460;
 }
@@ -92,3 +117,8 @@ color: black;
     width: 20% !important;
 
 } 
+
+.ic{
+
+    color:rgb(29, 27, 27)
+}
