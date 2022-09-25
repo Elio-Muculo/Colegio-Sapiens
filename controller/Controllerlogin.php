@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $error[] = "<p>Usuario ou Senha incorrectos!</p>";
 
             $_SESSION['error'] = $error;
-            //header("location:../index.php");
+            header("location:../index.php");
         }
     } else {
         $error[] = "<p>Usuario ou Senha incorrectos!</p>";
