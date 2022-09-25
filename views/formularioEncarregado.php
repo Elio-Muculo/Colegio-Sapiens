@@ -45,49 +45,53 @@
                         <div class="container">
                             <div class="row mt-0">
                                 <div class="col-sm-10 offset-sm-1  p-2">
-                                    <h1 class="texto text-center mt-3">Formul&aacute;rio do Encarregado</h1>
-                                    <form action="controller/encarregado.php" method="post" class=" row p-3">
+                                    <h1 class="texto text-center mt-2">Formul&aacute;rio do Encarregado</h1>
+                                    <form action="controller/encarregado.php" method="post" class=" row p-2">
                                         <p>Preencha os Campos</p>
 
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
                                             <input type="text" name="nome" placeholder="Nome (UserName)" class="form-control">
                                         </div>
                         
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                             <input type="text" name="apelido" placeholder="Apelido" class="form-control">
                                         </div>
                                         
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text"><i class="fas fa-lock icon"></i></span>
+                                            <input type="password" name="senha" placeholder="Senha" class="form-control">
+                                        </div>
 
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
                                             <input type="text" name="telefone" placeholder="Numero de Telefone" class="form-control">
                                         </div>
 
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fas fa-light fa-envelope"></i></span>
                                             <input type="email" name="email" placeholder="Email" class="form-control">
                                         </div>
                                         
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fa-solid fa-house-user"></i></span>
                                             <input type="text" name="bairro" placeholder="Bairro" class="form-control">
                                         </div>
                                     
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fa-sharp fa-solid fa-house"></i></span>
                                             <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control">
                                         </div>
                                         
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-2">
                                             <span class="input-group-text"><i class="fa-regular fa-calendar-check"></i></span>
                                             <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control">
                                         </div>
                                     
 
                                         <div class="col-md-4 col-lg-4 col-sm-12">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-2">
                                                 <span class="input-group-text"><i class="fa-sharp fa-solid fa-venus-mars"></i></span>
                                                 <select class="form-select" name="genero">
                                                     <option selected>Genero</option>
