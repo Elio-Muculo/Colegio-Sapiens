@@ -5,7 +5,7 @@
  */
 
  define("HOST", "localhost");
- define("DBNAME", "db_atm");
+ define("DBNAME", "colegio_sapiens");
  define("USER", "root");
  define("PASSWORD", "");
 

@@ -31,7 +31,7 @@
                 <div class="title text-center fs-1 ">
                     Formul&aacute;rio do Professor
                 </div>
-                <form action="../controller/Cadastro_professor"  method ="POST" class="p-4 form">
+                <form action="../controller/Cadastro_professor.php"  method ="POST" class="p-4 form">
                     <div class="text-color">Preencha os campos</div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-user-circle icon"></i></span>

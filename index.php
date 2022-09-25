@@ -40,7 +40,7 @@
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
-                        <input type="text" nmae="senha"class="form-control inputs" placeholder="Senha">
+                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha">
                     </div>
                     <div class="mb-3">
                         <input type="checkbox" class="form-check-input"> <label for="lembrarcod"> Lembrar codigo</label>

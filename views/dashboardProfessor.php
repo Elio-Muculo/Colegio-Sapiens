@@ -6,61 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Professor</title>
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/cssgeral/gedia/dashProfessor.css">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="centro w-40">
-            <div class="w-40">
-                <div class="row">
-                    <div class="col-md-3 col-lg-3 col-sm-12 p-0">
-                        <div class="telaVerde">
-                            <div class="header p-4 ms-2 w-100 position-fixed ">
-                                <div class="float-start text-white">
-                                    <h3 style="line-height: 2px;" ;>C<span class="fw-bold ">SP</span></h3>
-                                </div>
 
-                                <div class="float-end text-white fw-bold">
-                                    <p>Nome do Professor<i class="fas fa-user"></i></p>
+    <div class="container-fluid header clearfix">
+        <h4 class="text-white float-start mx-3">CSP</h4>
+        <p class="text-white float-end mx-5">Nome do Professor<i class=""></p>
+    </div>
 
-                                </div>
-                                <div class="menu py-2 ">
-                                    <h5 class="mt-5 text-white ms-3 p-3">Selecione uma op&ccedil;&atilde;o</h5>
-                                    <div class="links">
-                                        <a href="agendarreuniao.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Agendar reuniao</a>
-                                        <a href="lancarNotas.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Lancar notas</a>
-                                        <a href="visualizarDados.php"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Visualizar dados</a>
-                                        <a href="solicitarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Solicitar reuniao</a>
-                                        <a href="confirmarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Confirmar reuniao</a>
-                                                  
-                                    </div>
-                                   
-        
-                                    <div class="logout">
-                                        <a href="#" class="logout fw-bold">Sair</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="imgPrincipal col-md-9 col-lg-9 col-sm-12 flex p-2 my-5">
-                        <div class="center w-100 ">
-                            <img src="../assets/img/alunos1.jpeg " alt="img-alunos" class="w-25 img-fluid ms-5">
-                            <img src="../assets/img/alunos2.jpeg" alt="img-alunos" class="w-25 img-fluid ms-5">
-                            <img src="../assets/img/alunos4.jpeg" alt="img-alunos" class="w-25 img-fluid ms-5">
-                        </div>
-                        
+    <div class="container-fluid body d-flex flex-row m-0 p-0">
 
-                    </div>
-                </div>
+        <div class="container col-lg-3 d-flex flex-column menu text-center">
+        <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
+           <div class="links">
+           <a href="agendarreuniao.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;</span>Agendar reuniao</a>
+           <a href="lancarNotas.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;</span>Lancar notas</a>
+           <a href="visualizarDados.php"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;</span>Visualizar dados</a>
+           <a href="solicitarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;</span>Solicitar reuniao</a>
+           <a href="confirmarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;</span>Confirmar reuniao</a>
+               
+           <div class="logout">
+              <a href="../index.php" class="logout fw-bold">Sair</a>
             </div>
+
+           </div> 
+           
+        </div>
+        
+        <div class="container col-lg-9 img d-flex justify-content-between">
+            <!-- <img src="../assets/img/grafico.jpeg" alt="" class="img"> -->
+
+            <div>
+                <img src="../assets/img/alunos1.jpeg" alt="" class="img-fluid">
+            </div>
+            <div>
+                <img src="../assets/img/alunos2.jpeg" alt="" class="img-fluid">
+            </div>
+            <div>
+                <img src="../assets/img/alunos4.jpeg" alt="" class="img-fluid">
+            </div>
+
+
         </div>
     </div>
+
 </body>
 
 </html>
-
-                        
