@@ -1,3 +1,8 @@
+<?php 
+require_once './../config/crud.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +38,7 @@
                     </div>
             
                         <h1 class="texto text-center mt-5">Agendar Reunião</h1>
-                        <form action="controller/agendarreuniao.php" method="post" class=" row p-3">
+                        <form action="./../controller/agendarreuniao.php" method="post" class=" row p-3">
                             
                 <div class="alinhamento1" >
 
@@ -43,7 +48,7 @@
                             <div class=" col-md-4 col-lg-4 col-sm-12">
                                 <div class="input-group mb-3" style="width: 185%">
                                     <span class="input-group-text"><i class="fa-solid fa-calendar"></i></span>
-                                    <input type="date" class="form-control" name="date"  style="width: 80%">
+                                    <input type="date" class="form-control" name="data"  style="width: 80%">
                                 </div>
                             </div>
 
@@ -52,10 +57,16 @@
                             <div class="col-md-4 col-lg-4 col-sm-12">
                                 <div class="input-group mb-3" style="width: 185%">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    <select class="form-select" name="participantes" placeholder="Selecione os Participantes" style="width: 80%">
+                                    <select class="form-select" name="encarregado_cod" placeholder="Selecione os Participantes" style="width: 80%">
                                         <option selected>Selecione Participantes</option>
-                                        <option>Turma A</option>
-                                        <option>Turma B</option>
+                                        <?php 
+                                            $encarregado = readAll("SELECT * FROM encarregado");
+                                            foreach ($encarregado as $e) {
+                                        ?>
+                                        <option value="<?php echo $e['codigo']; ?>"><?php echo $e['nome']; ?></option>
+                                        <?php
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                             </div>
