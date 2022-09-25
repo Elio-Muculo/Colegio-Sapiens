@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once __DIR__ . '/config/crud.php';
+require_once '../config/crud.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -10,34 +10,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      * dados do encarregado para criar a conta
      */
     $dadosEncarregadoUser = [
-        'username' => $_POST['username'],
-        'senha' => $_POST['senha'],
+        'username' => $_POST['nome'],
+        'senha' => password_hash("123456", PASSWORD_BCRYPT),
         'perfil' => "encarregado",
         'estado' => 1,
     ];
 
-    /**
-     * dados do encarregado vindo do input's
-     */
-    $dadosEncarregado = [
-        'nome' => $numero_conta, 
-        'apelido' => $nome, 
-        'telefone' => $pin, 
-        'bairro' => 1, 
-        'quarteirao' => date("Y-m-d H:i:s"),
-        'email' => date("Y-m-d H:i:s"),
-        'genero' => date("Y-m-d H:i:s"),
-        'data_nascimento' = ,
-        'user_id' => date("Y-m-d H:i:s")
-    ];
 
     $sql = "INSERT INTO Usuario (username, senha, perfil, estado) VALUES (:username, :senha, :perfil, :estado)";
     $inserted = insertAll($sql, $dadosEncarregadoUser);
-
     if ($inserted == 1) {
-        $id = readOne("SELECT id FROM usuario ORDER BY id DESC LIMIT 1");
+        // pegamos o id do usuario que foi adicionado em cima. 
+        // ['codigo' => 1]
+        $id = readOne("SELECT codigo FROM usuario ORDER BY codigo DESC LIMIT 1");
 
+        /**
+         * dados do encarregado vindo do input's
+        */
+        $dadosEncarregado = [
+            'nome' => $_POST['nome'], 
+            'apelido' => $_POST['apelido'], 
+            'telefone' => $_POST['telefone'], 
+            'bairro' => $_POST['bairro'], 
+            'quarteirao' => $_POST['quarteirao'],
+            'email' => $_POST['email'],
+            'genero' => $_POST['genero'],
+            'data_nascimento' => $_POST['data_nascimento'],
+            'user_id' => $id['codigo']
+        ];
+        
         insertAll("INSERT INTO encarregado (nome, apelido, telefone, bairro, quarteirao, email, genero, data_nascimento, user_id) VALUES (:nome, :apelido, :telefone, :bairro, :quarteirao, :email, :genero, :data_nascimento, :user_id)", $dadosEncarregado);
+        die();
         $_SESSION['conta'] = $numero_conta;
         header('Location: ../views/index.php');
         die();

@@ -46,7 +46,7 @@
                             <div class="row mt-0">
                                 <div class="col-sm-10 offset-sm-1  p-2">
                                     <h1 class="texto text-center mt-3">Formul&aacute;rio do Encarregado</h1>
-                                    <form action="controller/encarregado.php" method="post" class=" row p-3">
+                                    <form action="./../controller/encarregado.php" method="post" class=" row p-3">
                                         <p>Preencha os Campos</p>
 
                                         <div class="input-group mb-3">
