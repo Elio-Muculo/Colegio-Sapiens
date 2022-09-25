@@ -24,20 +24,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'apelido' => $nome, 
         'telefone' => $pin, 
         'bairro' => 1, 
-        'quarteirao' => date("Y-m-d H:i:s")
-        'numero_casa' => date("Y-m-d H:i:s")
-        'email' => date("Y-m-d H:i:s")
-        'genero' => date("Y-m-d H:i:s")
-        'usuario_id' => date("Y-m-d H:i:s")
+        'quarteirao' => date("Y-m-d H:i:s"),
+        'email' => date("Y-m-d H:i:s"),
+        'genero' => date("Y-m-d H:i:s"),
+        'data_nascimento' = ,
+        'user_id' => date("Y-m-d H:i:s")
     ];
 
     $sql = "INSERT INTO Usuario (username, senha, perfil, estado) VALUES (:username, :senha, :perfil, :estado)";
     $inserted = insertAll($sql, $dadosEncarregadoUser);
 
     if ($inserted == 1) {
-        $id = readOne("SELECT id FROM Usuario ORDER BY id DESC LIMIT 1");
+        $id = readOne("SELECT id FROM usuario ORDER BY id DESC LIMIT 1");
 
-        insertAll("INSERT INTO Encarregado (nome, apelido, telefone, bairro, quarteirao, numero_casa, email, genero, usuario_id) VALUES (:nome, :apelido, :telefone, :bairro, :quarteirao, :numero_casa, :email, :genero, :usuario_id)", $dadosEncarregado);
+        insertAll("INSERT INTO encarregado (nome, apelido, telefone, bairro, quarteirao, email, genero, data_nascimento, user_id) VALUES (:nome, :apelido, :telefone, :bairro, :quarteirao, :email, :genero, :data_nascimento, :user_id)", $dadosEncarregado);
         $_SESSION['conta'] = $numero_conta;
         header('Location: ../views/index.php');
         die();
