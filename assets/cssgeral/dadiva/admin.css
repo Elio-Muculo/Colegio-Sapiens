@@ -80,3 +80,12 @@ main {
         height: calc(100% - var(--topNavBarHeight));
     }
 }
+
+.CSP{
+    color: white !important;
+}
+
+.img{
+
+    position: fixed;
+}
