@@ -1,0 +1,41 @@
+
+/* Agendar reunião */
+
+h1{
+
+  color: #3e9178;
+  text-align: center;
+  
+  }
+  h5{
+        color: white;
+        position: absolute;
+  }
+  h6{
+      text-align: right;
+
+
+  }
+
+
+
+  .agendar{
+
+text-align: left;
+
+position: absolute;
+
+
+  }
+
+  .cancelar{
+
+
+text-align: right;
+
+  }
+
+  .form-label{ 
+      color: #cec9c9;
+  }
+

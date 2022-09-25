@@ -30,11 +30,11 @@
                                 <div class="menu py-2 ">
                                     <h5 class="mt-5 text-white ms-3 p-3">Selecione uma op&ccedil;&atilde;o</h5>
                                     <div class="links">
-                                        <a href="#"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Agendar reuniao</a>
-                                        <a href="#"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Lancar notas</a>
-                                        <a href="#"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Visualizar dados</a>
-                                        <a href="#"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Solicitar reuniao</a>
-                                        <a href="#"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Confirmar reuniao</a>
+                                        <a href="agendarreuniao.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Agendar reuniao</a>
+                                        <a href="lancarNotas.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Lancar notas</a>
+                                        <a href="visualizarDados.php"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Visualizar dados</a>
+                                        <a href="solicitarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Solicitar reuniao</a>
+                                        <a href="confirmarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span>Confirmar reuniao</a>
                                                   
                                     </div>
                                    
