@@ -1,3 +1,8 @@
+<?php 
+
+require_once './../config/crud.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,14 +80,21 @@
                                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                                             <select class="form-select " name="encarregado_id">
                                                 <option selected>Nome do Encarregado</option>
-                                                <option>...</option>
+                                                <?php 
+                                                        $encarregado = readAll("SELECT * FROM encarregado");
+                                                        foreach ($encarregado as $e) {
+                                                    ?>
+                                                    <option value="<?php echo $e['codigo']; ?>"><?php echo $e['nome']; ?></option>
+                                                    <?php
+                                                        }
+                                                    ?>
                                             </select>
                                         </div>
 
                                         <div class="col-md-4 col-lg-4 col-sm-12">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text"><i class="fa-sharp fa-solid fa-venus-mars"></i></span>
-                                                <select class="form-select ">
+                                                <select class="form-select" name="genero">
                                                     <option selected>Genero</option>
                                                     <option value="M">M</option>
                                                     <option value="F">F</option>
@@ -96,7 +108,14 @@
                                                 <span class="input-group-text"><i class="fa-sharp fa-solid fa-people-roof"></i></span>
                                                 <select class="form-select " name="turma_id">
                                                     <option selected>Nome da Turma </option>
-                                                    <option>...</option>
+                                                    <?php 
+                                                        $turma = readAll("SELECT * FROM turma");
+                                                        foreach ($turma as $t) {
+                                                    ?>
+                                                    <option value="<?php echo $t['codigo']; ?>"><?php echo $t['nome']; ?></option>
+                                                    <?php
+                                                        }
+                                                    ?>
                                                 </select>
                                             </div>
                                         </div>

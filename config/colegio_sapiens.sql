@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Set-2022 às 17:46
+-- Tempo de geração: 25-Set-2022 às 18:49
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -103,6 +103,7 @@ CREATE TABLE `educando` (
   `apelido` varchar(20) DEFAULT NULL,
   `encarregado_id` int(11) DEFAULT NULL,
   `data_nascimento` datetime DEFAULT NULL,
+  `genero` varchar(10) NOT NULL,
   `bairro` varchar(45) DEFAULT NULL,
   `quarteirao` varchar(45) DEFAULT NULL,
   `turma_id` int(11) DEFAULT NULL
@@ -112,11 +113,11 @@ CREATE TABLE `educando` (
 -- Extraindo dados da tabela `educando`
 --
 
-INSERT INTO `educando` (`codigo`, `nome`, `apelido`, `encarregado_id`, `data_nascimento`, `bairro`, `quarteirao`, `turma_id`) VALUES
-(1, 'Hidelgio', 'Novela', 2, '2022-09-24 16:44:19', '1 de Maio', '13', 1),
-(2, 'Jose', 'Langa', 1, '2022-09-24 16:44:19', 'T-3', '2', 2),
-(3, 'Sidio', 'Novela', 2, '2022-09-24 16:45:52', '1 de Maio', '13', 4),
-(4, 'Sónia ', 'Langa', 1, '2022-09-24 16:45:52', 'T-3', '5', 2);
+INSERT INTO `educando` (`codigo`, `nome`, `apelido`, `encarregado_id`, `data_nascimento`, `genero`, `bairro`, `quarteirao`, `turma_id`) VALUES
+(1, 'Hidelgio', 'Novela', 2, '2022-09-24 16:44:19', '', '1 de Maio', '13', 1),
+(2, 'Jose', 'Langa', 1, '2022-09-24 16:44:19', '', 'T-3', '2', 2),
+(3, 'Sidio', 'Novela', 2, '2022-09-24 16:45:52', '', '1 de Maio', '13', 4),
+(4, 'Sónia ', 'Langa', 1, '2022-09-24 16:45:52', '', 'T-3', '5', 2);
 
 -- --------------------------------------------------------
 
@@ -143,7 +144,10 @@ CREATE TABLE `encarregado` (
 
 INSERT INTO `encarregado` (`codigo`, `nome`, `apelido`, `telefone`, `bairro`, `quarteirao`, `email`, `genero`, `data_nascimento`, `user_id`) VALUES
 (1, 'Maria', 'Langa', '842759368', 'Malhazine', '12', 'maria@gmail.com', 'F', '1990-09-24 16:05:42', 2),
-(2, 'Tania', 'Malate', '824569875', 'Zona Verde', '19', 'tania@gmail.com', 'F', '1980-09-24 16:08:16', 4);
+(2, 'Tania', 'Malate', '824569875', 'Zona Verde', '19', 'tania@gmail.com', 'F', '1980-09-24 16:08:16', 4),
+(4, 'Elio', 'muculo', '842644623', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-21 00:00:00', 13),
+(5, 'Dark', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-28 00:00:00', 14),
+(6, 'Dark', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-28 00:00:00', 15);
 
 -- --------------------------------------------------------
 
@@ -285,7 +289,16 @@ INSERT INTO `usuario` (`codigo`, `username`, `senha`, `perfil`, `estado`) VALUES
 (3, 'Vasco', '1234', 'professor', '1'),
 (4, 'Tania', '1234', 'encarregado', '1'),
 (5, 'Amelia ', '1234', 'professor', '1'),
-(6, 'Fatima', '1234', 'professor', '1');
+(6, 'Fatima', '1234', 'professor', '1'),
+(7, NULL, '$2y$10$IyRpqFyTHW0ilKUq7VyOne5KbKeOOubbHHVts1TzySAnpWtt9O3oa', 'encarregado', '1'),
+(8, 'Elio', '$2y$10$txCyvePf5YhX4T4D3VtDGu9bfx3nZvhjUN.cdnQtavHTH/LjHAKpq', 'encarregado', '1'),
+(9, 'Elio', '$2y$10$bMgaSx/g9ggpResxzRZ2K.nTzAAxiIxc57BXvPaeGdqrunhRJSf/6', 'encarregado', '1'),
+(10, 'Elio', '$2y$10$WyO3oy2g3j8N/wE6Xr5QzetUjshgHrwmMtM9Y8A2Qwrg.l7vSKRN6', 'encarregado', '1'),
+(11, 'Elio', '$2y$10$syrtCLXhMad7JOUF/Ynu.O9iC5KcGYuMQmL.otb92ePwpM8X9u82O', 'encarregado', '1'),
+(12, 'Elio', '$2y$10$m6x6v3fmGMAGZ5fq1BFXRebwn6fW9T/qmU.Kzn4noG1LwPF6OneZW', 'encarregado', '1'),
+(13, 'Elio', '$2y$10$aU3X7Qtuy47Y4lpOoHkO2.09BtvZyrlZ8tlg9c0PVbPvV4sLWbn5O', 'encarregado', '1'),
+(14, 'Dark', '$2y$10$HKobKXiroLFkYcmKRQBrlei5V8qMl7KIHv2WoTl.kD7gwloTozqDO', 'encarregado', '1'),
+(15, 'Dark', '$2y$10$1dSeK0PxW.z9cQfcWj3Pj.MErvpmvA10NOUrizzhYPL58h5b5wV42', 'encarregado', '1');
 
 --
 -- Índices para tabelas despejadas
@@ -395,7 +408,7 @@ ALTER TABLE `educando`
 -- AUTO_INCREMENT de tabela `encarregado`
 --
 ALTER TABLE `encarregado`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `nota`
@@ -425,7 +438,7 @@ ALTER TABLE `turma`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restrições para despejos de tabelas
