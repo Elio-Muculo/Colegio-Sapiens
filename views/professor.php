@@ -35,27 +35,27 @@
                     <div class="text-color">Preencha os campos</div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-user-circle icon"></i></span>
-                        <input type="text" name="nome" class="form-control inputs" placeholder="Nome (UserName) *">
+                        <input type="text" name="nome" class="form-control inputs" placeholder="Nome (UserName) *"  required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-user icon"></i></span>
-                        <input type="text" name="apelido"class="form-control inputs" placeholder="Apelido *">
+                        <input type="text" name="apelido"class="form-control inputs" placeholder="Apelido *" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
-                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha *">
+                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha *" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-sort-numeric-up-alt icon"></i></span>
-                        <input type="text" name="numero_BI" class="form-control inputs" placeholder="Número de BI *">
+                        <input type="text" name="numero_BI" class="form-control inputs" placeholder="Número de BI *" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-home me-2 icon"></i></span>
-                        <input type="text" name="quarterao" class="form-control inputs" placeholder="Quarterão">
+                        <input type="text" name="quarterao" class="form-control inputs" placeholder="Quarterão"  >
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-graduation-cap me-2 icon"></i></span>
-                        <input type="text" name="formacao"class="form-control inputs" placeholder="Formação*">
+                        <input type="text" name="formacao"class="form-control inputs" placeholder="Formação*" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-paste icon"></i></span>
