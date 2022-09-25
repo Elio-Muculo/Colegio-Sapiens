@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Set-2022 às 17:46
+-- Tempo de geração: 25-Set-2022 às 17:46
 -- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `colegio sapiens`
+-- Banco de dados: `colegio`
 --
 
 -- --------------------------------------------------------
@@ -270,7 +270,7 @@ INSERT INTO `turma` (`codigo`, `nome`, `numero_educandos`, `turno`, `Classe_id`,
 CREATE TABLE `usuario` (
   `codigo` int(11) NOT NULL,
   `username` varchar(45) DEFAULT NULL,
-  `senha` varchar(45) DEFAULT NULL,
+  `senha` varchar(255) DEFAULT NULL,
   `perfil` varchar(45) DEFAULT NULL,
   `estado` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
