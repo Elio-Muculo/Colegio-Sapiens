@@ -11,13 +11,27 @@ require_once './../config/crud.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Reunião</title>
-    <link rel="stylesheet" href="../assets/cssgeral/edmilson/style.css">
+   
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="../assets/cssgeral/edmilson/style.css">
 </head>
 
 <body>
+
+                    <div class="alinhamento">
+                            <div class="alinhamnento4">
+                               cSP 
+                            </div>
+                                 
+                            <div class="alinhamento3">
+                             
+                                    Nome do Professor
+                                
+                            </div>
+
+                    </div>
+
     <div class="container-fluid">
         <div class="centro w-40">
             <div class="w-40">
@@ -27,20 +41,11 @@ require_once './../config/crud.php';
                     <div class="telaP col-md-9 col-lg-9 col-sm-12 px-auto mx-auto">
 
 
-                    <div class="alinhamento">
-                            <div class="alinhamnento4">
-                               cSP 
-                            </div>
-                            <div class="alinhamento3">
-                                Nome do Professor
-                            </div>
-
-                    </div>
             
                         <h1 class="texto text-center mt-5">Agendar Reunião</h1>
                         <form action="./../controller/agendarreuniao.php" method="post" class=" row p-3">
                             
-                <div class="alinhamento1" >
+                <div class="alinhamento1" tyle="background-color: #d9d9d9"  >
 
                  
 <p></p>
@@ -74,7 +79,7 @@ require_once './../config/crud.php';
                             
                             <div class=" col-md-4 col-lg-4 col-sm-12">
                                 <div class="input-group mb-3" style="width: 185%">
-                                    <span class="input-group-text"><i class="fa-regular fa-pen-nib"></i></span>
+                                    <span class="input-group-text"><i class="fa-regular fa-calendar-check"></i></span>
                                     <input type="text" class="form-control" name="assunto" placeholder="Assunto da Reunião" style="width: 80%">
                                 </div>
                             </div>
@@ -82,11 +87,11 @@ require_once './../config/crud.php';
 
                             <div class="col-md-4 col-lg-4 col-sm-12">
                                 <div class="input-group mb-3" style="width: 185%">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <span class="input-group-text"><i class="fa-duotone fa-person-military-to-person"></i></span>
                                     <select class="form-select" name="tipo" style="width: 80%">
                                         <option selected>Tipo de Reunião</option>
-                                        <option>Urgente</option>
-                                        <option>Trimestral</option>
+                                        <option>Ordinaria</option>
+                                        <option>Extra-ordinaria</option>
                                     </select>
                                 </div>
                             </div>
@@ -99,12 +104,12 @@ require_once './../config/crud.php';
 <br>     
                      
                         
-                            <div class="col-md-3 col-lg-3 col-sm-12 botao text-center " style="margin-left: 25%">
+                            <div class="col-md-3 col-lg-3 col-sm-12 botao text-center " style="margin-left: 27%">
                                 <button type="submit" class="btn"  >Agendar</button>
                             </div>
 
-                            <div class="col-md-3 col-lg-3 col-sm-12 botao text-center mx-3" style="margin-left: 75%">
-                                <button class="btn" >Cancelar</button>
+                            <div class="col-md-3 col-lg-3 col-sm-12 botao text-center mx-3" style="margin-left: 77%">
+                                <button class="btn" >Canselar</button>
                             </div>
                        
                    
