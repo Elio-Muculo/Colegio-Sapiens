@@ -29,42 +29,42 @@
             </div>
             <div class="col-md-8 col-sm-12 col-lg-8 box p-0 py-4">
                 <div class="title text-center fs-1 ">
-                    Formulario do Professor
+                    Formul&aacute;rio do Professor
                 </div>
                 <form action="../controller/Cadastro_professor.php"  method ="POST" class="p-4 form">
                     <div class="text-color">Preencha os campos</div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-user-circle icon"></i></span>
-                        <input type="text" name="nome" class="form-control inputs" placeholder="Nome (UserName) *">
+                        <input type="text" name="nome" class="form-control inputs" placeholder="Nome (UserName) *"  required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-user icon"></i></span>
-                        <input type="text" name="apelido"class="form-control inputs" placeholder="Apelido *">
+                        <input type="text" name="apelido"class="form-control inputs" placeholder="Apelido *" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
-                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha *">
+                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha *" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-sort-numeric-up-alt icon"></i></span>
-                        <input type="text" name="numero_BI" class="form-control inputs" placeholder="Numero do BI *">
+                        <input type="text" name="numero_BI" class="form-control inputs" placeholder="Número de BI *" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-home me-2 icon"></i></span>
-                        <input type="text" name="quarterao" class="form-control inputs" placeholder="Quarteirao">
+                        <input type="text" name="quarterao" class="form-control inputs" placeholder="Quarterão"  >
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-graduation-cap me-2 icon"></i></span>
-                        <input type="text" name="formacao"class="form-control inputs" placeholder="Formacao *">
+                        <input type="text" name="formacao"class="form-control inputs" placeholder="Formação*" required>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text inputs"><i class="fas fa-paste icon"></i></span>
-                        <input type="text" name="experiencia" class="form-control inputs" placeholder="Experiencia">
+                        <input type="text" name="experiencia" class="form-control inputs" placeholder="Experiência">
                     </div>
                     <div class="input-group mb-4 w-4">
                         <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-venus-mars icon"></i></span>
                         <select name="genero" id="" class="form-select">
-                            <option value="0">Genero</option>
+                            <option value="0">Gênero</option>
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
                         </select>

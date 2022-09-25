@@ -36,14 +36,14 @@
                     <div class="text-center">Preencha os campos</div>
                     <div class="input-group mb-3">
                         <span class="input-group-text inputs"><i class="fas fa-envelope icon"></i></span>
-                        <input type="text" name="nome" class="form-control inputs" placeholder="Seu email/Nome">
+                        <input type="text" name="nome" class="form-control inputs" placeholder="Seu email/Nome" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
-                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha">
+                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha"  required>
                     </div>
                     <div class="mb-3">
-                        <input type="checkbox" class="form-check-input"> <label for="lembrarcod"> Lembrar codigo</label>
+                        <input type="checkbox" nome="checar" class="form-check-input"> <label for="lembrarcod"> Lembrar codigo</label>
                         
                         
                     </div>
