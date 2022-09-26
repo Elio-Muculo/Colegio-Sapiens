@@ -14,12 +14,12 @@
   
   .telaVerde{
     background-color: #3E9178;
-    height: 100vh;
+    min-height: 100vh;
   }
   
   .logo{
       width: 100%;
-      height: 30%;
+      height: 200px;
       border-bottom: .1rem #fff solid;
   }
   .img{

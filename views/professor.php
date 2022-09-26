@@ -77,7 +77,7 @@
 
                     <a class="  botoesprf  btn btn-sm btn-outline-success me-2"  href="../views/admin.php"> Voltar</a>
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                 <button type="reset" class="  botoesprf  btn btn-sm btn-outline-success me-2"  > Canselar</button> 
+                 <button type="reset" class="  botoesprf  btn btn-sm btn-outline-success me-2"  > Cancelar</button> 
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                       <button type="submit" class="  botoesprf  btn btn-sm btn-outline-success me-2" > Guardar </button>
                     </div>
