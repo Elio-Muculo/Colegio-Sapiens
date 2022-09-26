@@ -1,5 +1,15 @@
 <?php 
+session_start();
 
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = 'O usuario não tem sessão iniciada no sistema.';
+    header('Location: ../index.php');
+}
+
+if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission'] == 'professor') {
+    $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
+    header('Location: ../index.php');
+}
 require_once './../config/crud.php';
 ?>
 
@@ -48,6 +58,20 @@ require_once './../config/crud.php';
                             <div class="row mt-0">
                                 <div class="col-sm-10 offset-sm-1  p-2">
                                     <h1 class="texto text-center mt-3">Formul&aacute;rio do Educando</h1>
+                                        <?php 
+                                            if (isset($_SESSION['error'])) { ?>
+                                                <div class="alert alert-danger alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+                                                </div>
+                                        <?php } ?>
+                                        <?php 
+                                            if (isset($_SESSION['success'])) { ?>
+                                                <div class="alert alert-success alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+                                                </div>
+                                        <?php } ?>
                                     <form action="../controller/cadastroEducando.php" method="post" class=" row p-3">
                                         <p>Preencha os Campos</p>
 
@@ -139,6 +163,9 @@ require_once './../config/crud.php';
                         </div>
                     </div>
                 </div>
+                    <script src="./../assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="./../assets/cssgeral/dadiva/all.min.js"></script>
 </body>
 
 </html>

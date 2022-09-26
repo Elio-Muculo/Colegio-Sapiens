@@ -1,3 +1,24 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../index.php');
+    die();
+}
+
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = 'O usuario não tem sessão iniciada no sistema.';
+    header('Location: ../index.php');
+}
+
+if($_SESSION['user_permission'] == 'encarregado') {
+    $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
+    header('Location: ../index.php');
+}
+
+
+require_once './../config/crud.php';
+?>
 <html lang="en">
 
 <head>
@@ -31,6 +52,20 @@
                 <div class="title text-center fs-1 ">
                     Formul&aacute;rio do Professor
                 </div>
+                                            <?php 
+                                            if (isset($_SESSION['error'])) { ?>
+                                                <div class="alert alert-danger alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+                                                </div>
+                                        <?php } ?>
+                                        <?php 
+                                            if (isset($_SESSION['success'])) { ?>
+                                                <div class="alert alert-success alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+                                                </div>
+                                        <?php } ?>
                 <form action="../controller/Cadastro_professor.php"  method ="POST" class="p-4 form">
                     <div class="text-color">Preencha os campos</div>
                     <div class="input-group mb-2">

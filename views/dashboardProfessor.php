@@ -1,5 +1,20 @@
 <?php 
 session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = 'O usuario não tem sessão iniciada no sistema';
+    header('Location: ../index.php');
+}
+
+if($_SESSION['user_permission'] == 'encarregado') {
+    $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
+    header('Location: ../index.php');
+}
+
+require_once './../config/crud.php';
+
+
+$professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SESSION['user_id']]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +32,7 @@ session_start();
 <body>
 
     <div class="container-fluid header clearfix">
+<<<<<<< HEAD
           <!-- <h4 class="text-white float-start mx-3">CSP</h4>
         <p class="text-white float-end mx-5">Nome do Professor<i class="fa-solid fa-circle-user"></p> -->
          
@@ -27,10 +43,15 @@ session_start();
             <div class="float-end text-white fw-bold mx-2">
               <p>Nome do Professor<i class="fas fa-user"></i></p>
             </div>
+=======
+        <h4 class="text-white float-start mx-3">CSP</h4>
+        <p class="text-white float-end mx-5">Bem - vindo, <?php echo $professor['nome'] . " " . $professor['apelido'] ?><i class=""></p>
+>>>>>>> 46ef885ce257c4982284402083bda495f6e1fcc9
     </div>
 
     <div class="container-fluid bod d-flex flex-row py-0 ">
 
+<<<<<<< HEAD
         <div class="container col-lg-3 d-flex flex-column menu text-center contai">
         <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
            <div class="links">
@@ -44,6 +65,21 @@ session_start();
               <a href="../index.php" class="logout fw-bold">Sair</a>
             </div>
             
+=======
+        <div class="container col-lg-3 d-flex flex-column menu text-center align-items-center">
+        <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
+           <div class="links align-items-center justify-content-center">
+           <a href="agendarreuniao.php"><span class="mr-5" style="margin-right: 25px; padding-left: 20px; "><i class="fa-regular fa-calendar"></i>&nbsp;</span>Agendar reunião</a>
+           <a href="lancarNotas.php"><span class="" style="margin-right: 25px; padding-left: 20px; "><i class="fa-regular fa-calendar"></i>&nbsp;</span>Lancar notas</a>
+           <a href="visualizarDados.php"><span clas="input-group-text" style="margin-right: 25px; padding-left: 20px; "><i class="fas fa-user"></i>&nbsp;</span>Visualizar dados</a>
+           <a href="solicitarReuniao"><span clas="input-group-text" style="margin-right: 25px; padding-left: 20px; "><i class="fas fa-user"></i>&nbsp;</span>Solicitar reunião</a>
+           <a href="confirmarReuniao"><span clas="input-group-text" style="margin-right: 25px; padding-left: 20px; "><i class="fas fa-user"></i>&nbsp;</span>Confirmar reunião</a>
+               
+           <!-- <div class="logout"> -->
+              <a href="../controller/sair.php" class="logout fw-bold mt-5 text-center" style="margin-top: 100px !important;">Sair</a>
+            <!-- </div> -->
+
+>>>>>>> 46ef885ce257c4982284402083bda495f6e1fcc9
            </div> 
            
         </div>

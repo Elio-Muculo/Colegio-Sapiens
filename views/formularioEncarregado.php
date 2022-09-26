@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../index.php');
+}
+
+
+
+require_once './../config/crud.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,54 +58,68 @@
                             <div class="row mt-0">
                                 <div class="col-sm-10 offset-sm-1  p-2">
                                     <h1 class="texto text-center mt-3">Formul&aacute;rio do Encarregado</h1>
+                                                                            <?php 
+                                            if (isset($_SESSION['error'])) { ?>
+                                                <div class="alert alert-danger alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+                                                </div>
+                                        <?php } ?>
+                                        <?php 
+                                            if (isset($_SESSION['success'])) { ?>
+                                                <div class="alert alert-success alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+                                                </div>
+                                        <?php } ?>
                                     <form action="./../controller/encarregado.php" method="post" class=" row p-4 ">
                                         <p>Preencha os Campos</p>
 
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fas fa-user-circle icon"></i></span>
-                                            <input type="text" name="nome" placeholder="Nome (UserName) *" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
+                                            <input type="text" name="nome" placeholder="Nome (UserName)" class="form-control" required>
                                         </div>
                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fas fa-user icon"></i></span>
-                                            <input type="text" name="apelido" placeholder="Apelido *" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" name="apelido" placeholder="Apelido" class="form-control" required>
                                         </div>
                                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
-                                            <input type="password" name="senha" placeholder="Senha *" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fas fa-lock icon"></i></span>
+                                            <input type="password" name="senha" placeholder="Senha" class="form-control" required>
                                         </div>
 
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fa-solid fa-phone icon"></i></span>
-                                            <input type="text" name="telefone" placeholder="Numero de Telefone *" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                            <input type="text" name="telefone" placeholder="Numero de Telefone" class="form-control" required>
                                         </div>
 
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fas fa-light fa-envelope icon"></i></span>
-                                            <input type="email" name="email" placeholder="Email *" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fas fa-light fa-envelope"></i></span>
+                                            <input type="email" name="email" placeholder="Email" class="form-control" required>
                                         </div>
                                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fa-solid fa-house-user icon"></i></span>
-                                            <input type="text" name="bairro" placeholder="Bairro" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fa-solid fa-house-user"></i></span>
+                                            <input type="text" name="bairro" placeholder="Bairro" class="form-control" required>
                                         </div>
                                     
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-house icon"></i></span>
-                                            <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fa-sharp fa-solid fa-house"></i></span>
+                                            <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control" required>
                                         </div>
                                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text inputs"><i class="fa-regular fa-calendar-check icon"></i></span>
-                                            <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control inputs">
+                                            <span class="input-group-text"><i class="fa-regular fa-calendar-check"></i></span>
+                                            <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control" required>
                                         </div>
                                     
 
                                         <div class="col-md-3 col-lg-3 col-sm-12">
                                             <div class="input-group mb-2">
-                                                <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-venus-mars icon"></i></span>
-                                                <select class="form-select inputs" name="genero">
+                                                <span class="input-group-text"><i class="fa-sharp fa-solid fa-venus-mars"></i></span>
+                                                <select class="form-select" name="genero" required>
                                                     <option selected>Genero</option>
                                                     <option value="M">M</option>
                                                     <option value="F">F</option>
@@ -107,7 +133,7 @@
 
 
                                         <div class="col-md-3 col-lg-3 col-sm-12 text-center mx-1">
-                                            <button class="btn fw-bold btn btn-sm btn-outline-success w-75 h-100 but mt-3"> <a href="admin.php"> Voltar</a></button>
+                                            <button class="btn fw-bold btn btn-sm btn-outline-success w-75 h-100 but mt-3"> <a href="./admin.php"> Voltar</a></button>
                                         </div>
 
                                         <div class="col-md-3 col-lg-3 col-sm-12  text-center ">
@@ -122,6 +148,9 @@
             </div>
         </div>
     </div>
+                        <script src="./../assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="./../assets/cssgeral/dadiva/all.min.js"></script>
 </body>
 
 </html>

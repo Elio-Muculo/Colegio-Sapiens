@@ -1,3 +1,23 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = 'O usuario não tem sessão iniciada no sistema.';
+    header('Location: ../index.php');
+}
+
+if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission'] == 'professor') {
+    $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
+    header('Location: ../index.php');
+}
+
+require_once './../config/crud.php';
+
+
+
+$admin = readOne("SELECT * FROM usuario WHERE codigo = :id", ['id' => $_SESSION['user_id']]);
+?>
+
 <html lang="en">
 
 <head>
@@ -11,9 +31,11 @@
 </head>
 
 <body class="body">
-    <nav class="navbar navbar-expand-lg bg-nav ">
+    <nav class="navbar navbar-expand-lg bg-nav container">
         <div>
     <a class="navbar-brand CSP"><h4>cSP</h4></a></div>
+    
+  
         <div class="container-fluid">
       
             <!--offcanvas trigger-->
@@ -27,14 +49,24 @@
               <span> <i class="fas fa-bars"></i></span>
             
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent s" >
+            
+                  <?php 
+                if (isset($_SESSION['msg'])) :
+                    echo "<h6>" .$_SESSION['msg']."</h6>";
+                    unset($_SESSION['msg']);
+                endif;
+            ?>
+          
+           
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
 
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item ">
                         <a class="nav-link text-white" href="#" role="button">
-                            Administrador <i class="fas fa-user"></i>
+                             <i class="fas fa-user"></i>
+                             Bem - vindo, <?php echo $admin['username'] ?>
                         </a>
 
                     </li>
@@ -63,7 +95,7 @@
                         <a  href ="formularioEncarregado.php" class="btn btn-menu"><i class="fas fa-download me-2"></i> Cadastrar Encarregado</a>
                     </div>
                     <div class="mt-5 p-5">
-                        <a href="" class="btn btn-menu mt-5">Sair</a>
+                        <a href="./../controller/sair.php" class="btn btn-menu mt-5">Sair</a>
                     </div>
                 </div>
             </div>
@@ -74,6 +106,7 @@
     <!--o conteudo da pagina fica aqui-->
     <main class="p-1">
     <img src="../assets/img/admin.jpeg" alt=""  width="100%" class="img">
+  
     </main>
 
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
