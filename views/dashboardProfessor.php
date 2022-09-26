@@ -12,6 +12,9 @@ if($_SESSION['user_permission'] == 'encarregado') {
 }
 
 require_once './../config/crud.php';
+
+
+$professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SESSION['user_id']]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,23 +33,23 @@ require_once './../config/crud.php';
 
     <div class="container-fluid header clearfix">
         <h4 class="text-white float-start mx-3">CSP</h4>
-        <p class="text-white float-end mx-5">Nome do Professor<i class=""></p>
+        <p class="text-white float-end mx-5">Bem - vindo, <?php echo $professor['nome'] . " " . $professor['apelido'] ?><i class=""></p>
     </div>
 
     <div class="container-fluid body d-flex flex-row m-0 p-0">
 
-        <div class="container col-lg-3 d-flex flex-column menu text-center">
+        <div class="container col-lg-3 d-flex flex-column menu text-center align-items-center">
         <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
-           <div class="links">
-           <a href="agendarreuniao.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;</span>Agendar reuniao</a>
-           <a href="lancarNotas.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;</span>Lancar notas</a>
-           <a href="visualizarDados.php"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;</span>Visualizar dados</a>
-           <a href="solicitarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;</span>Solicitar reuniao</a>
-           <a href="confirmarReuniao"><span clas="input-group-text"><i class="fas fa-user"></i>&nbsp;</span>Confirmar reuniao</a>
+           <div class="links align-items-center justify-content-center">
+           <a href="agendarreuniao.php"><span class="mr-5" style="margin-right: 25px; padding-left: 20px; "><i class="fa-regular fa-calendar"></i>&nbsp;</span>Agendar reunião</a>
+           <a href="lancarNotas.php"><span class="" style="margin-right: 25px; padding-left: 20px; "><i class="fa-regular fa-calendar"></i>&nbsp;</span>Lancar notas</a>
+           <a href="visualizarDados.php"><span clas="input-group-text" style="margin-right: 25px; padding-left: 20px; "><i class="fas fa-user"></i>&nbsp;</span>Visualizar dados</a>
+           <a href="solicitarReuniao"><span clas="input-group-text" style="margin-right: 25px; padding-left: 20px; "><i class="fas fa-user"></i>&nbsp;</span>Solicitar reunião</a>
+           <a href="confirmarReuniao"><span clas="input-group-text" style="margin-right: 25px; padding-left: 20px; "><i class="fas fa-user"></i>&nbsp;</span>Confirmar reunião</a>
                
-           <div class="logout">
-              <a href="../index.php" class="logout fw-bold">Sair</a>
-            </div>
+           <!-- <div class="logout"> -->
+              <a href="../controller/sair.php" class="logout fw-bold mt-5 text-center" style="margin-top: 100px !important;">Sair</a>
+            <!-- </div> -->
 
            </div> 
            

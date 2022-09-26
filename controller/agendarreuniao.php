@@ -39,8 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ];
 
     $encarregado = readOne("SELECT * FROM encarregado WHERE codigo = :id", ['id' => $_POST['encarregado_cod']]);
-    
+    var_dump($_POST['encarregado_cod']);
     $inserted = insertAll("INSERT INTO reuniao (tipo, assunto, data, professor_cod, encarregado_cod) VALUES (:tipo, :assunto, :data, :professor_cod, :encarregado_cod)", $dadosReuniao);
+    
     if ($inserted == 1) {
         try {
             //Server settings
@@ -75,10 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            echo "<script>location.href='../views/admin.php';</script>";
+            $_SESSION['success'] = 'A reunião foi criada com sucesso e e-mail foi enviado ao encarregado';
+            echo "<script>location.href='../views/agendarreuniao.php';</script>";
+            
             die("dado inserido com sucesso");
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            $_SESSION['success'] = "Não foi possivel enviar a mensagem {$mail->ErrorInfo}";
+            echo "<script>location.href='../views/agendarreuniao.php';</script>";
         }
     } else {
         $error[] = "<p>Os dados não foram inseridos</p>";

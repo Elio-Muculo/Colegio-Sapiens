@@ -52,6 +52,20 @@ require_once './../config/crud.php';
                 <div class="title text-center fs-1 ">
                     Formul&aacute;rio do Professor
                 </div>
+                                            <?php 
+                                            if (isset($_SESSION['error'])) { ?>
+                                                <div class="alert alert-danger alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+                                                </div>
+                                        <?php } ?>
+                                        <?php 
+                                            if (isset($_SESSION['success'])) { ?>
+                                                <div class="alert alert-success alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
+                                                    <button class="btn-close" data-bs-dismiss='alert'></button>
+                                                    <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+                                                </div>
+                                        <?php } ?>
                 <form action="../controller/Cadastro_professor.php"  method ="POST" class="p-4 form">
                     <div class="text-color">Preencha os campos</div>
                     <div class="input-group mb-2">
@@ -98,7 +112,7 @@ require_once './../config/crud.php';
 
                     <a class="  botoesprf  btn btn-sm btn-outline-success me-2"  href="../views/admin.php"> Voltar</a>
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                 <button type="reset" class="  botoesprf  btn btn-sm btn-outline-success me-2"  > Canselar</button> 
+                 <button type="reset" class="  botoesprf  btn btn-sm btn-outline-success me-2"  > Cancelar</button> 
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                       <button type="submit" class="  botoesprf  btn btn-sm btn-outline-success me-2" > Guardar </button>
                     </div>

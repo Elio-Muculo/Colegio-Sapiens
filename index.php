@@ -28,18 +28,18 @@ session_start();
                         Bem Vindo
                     </div>
                     <div class="">
-                        <p class="p-4 text-center text-white text-p ">Mantenha-se actualizado <br> sobre as noticias da<br> Escola e a informa&ccedil;&atilde;o<br> do seu educando</p>
+                        <p class="p-4 text-justify text-center text-white text-p ">Mantenha-se actualizado <br> sobre as noticias da<br> Escola e a informa&ccedil;&atilde;o<br> do seu educando</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 col-sm-12 col-lg-8 box p-0">
-                <div class="title text-center fw-bold">
-                    <h3>Faca o Login</h3>
+                <div class="title text-center fw-bold mt-5">
+                    <h3>Faça o Login</h3>
                 </div>
 
                 <?php 
                 if (isset($_SESSION['error'])) { ?>
-                    <div class="alert alert-danger alert-dismissible mt-5 w-50 mx-auto" style="height: 50px; line-height: 15px">
+                    <div class="alert alert-danger alert-dismissible mt-5 w-75 mx-auto align-items-center justify-content-center" style="height: 50px; line-height: 15px;">
                         <button class="btn-close" data-bs-dismiss='alert'></button>
                         <?php echo $_SESSION['error']; session_destroy(); ?>
                     </div>
@@ -47,7 +47,7 @@ session_start();
 
                 <form action="./controller/Controllerlogin.php" method="POST" class="my-3 mx-5 p-4">
                     <div class="text-center">Preencha os campos</div>
-                    <div class="input-group mb-3">
+                    <div class="input-group my-3">
                         <span class="input-group-text inputs"><i class="fas fa-envelope icon"></i></span>
                         <input type="text" name="nome" class="form-control inputs" placeholder="Seu email/Nome" value="<?php if (isset($_COOKIE['username'])) {
                                                                                                                             echo $_COOKIE['username'];
@@ -73,7 +73,7 @@ session_start();
 
                     <div class=" text-center group mb-3">
 
-                        <a id="linklog" class="text-center  " href="">Esqueci minha senha</a>
+                        <a id="linklog" class="text-center  " href="">Esqueci a minha senha</a>
                     </div>
             </div>
             </form>

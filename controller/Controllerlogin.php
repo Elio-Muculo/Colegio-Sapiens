@@ -67,13 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 } else {
                     if ($dados['perfil'] == 'admin') {
                         //caso o perfil seja admin
-                        $_SESSION['user_id'] = $senhaUser;
+                        $_SESSION['user_id'] = $dados['codigo'];
                         $_SESSION['user_permission'] = $dados['perfil'];
                         header("location: ../views/admin.php");
                         die();
                     } else {
                         //caso o perfil seja encarregado
-                        $_SESSION['user_id'] = $senhaUser;
+                        $_SESSION['user_id'] = $dados['codigo'];
                         $_SESSION['user_permission'] = $dados['perfil'];
                         header("location:../views/dashboardEncarregado.php");
                         die();

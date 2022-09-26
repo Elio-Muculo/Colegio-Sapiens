@@ -12,6 +12,10 @@ if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission']
 }
 
 require_once './../config/crud.php';
+
+
+
+$admin = readOne("SELECT * FROM usuario WHERE codigo = :id", ['id' => $_SESSION['user_id']]);
 ?>
 
 <html lang="en">
@@ -27,7 +31,7 @@ require_once './../config/crud.php';
 </head>
 
 <body class="body">
-    <nav class="navbar navbar-expand-lg bg-nav ">
+    <nav class="navbar navbar-expand-lg bg-nav container">
         <div>
     <a class="navbar-brand CSP"><h4>cSP</h4></a></div>
     
@@ -61,8 +65,8 @@ require_once './../config/crud.php';
                 <ul class="navbar-nav">
                     <li class="nav-item ">
                         <a class="nav-link text-white" href="#" role="button">
-                            Administrador <i class="fas fa-user"></i>
-              
+                             <i class="fas fa-user"></i>
+                             Bem - vindo, <?php echo $admin['username'] ?>
                         </a>
 
                     </li>
@@ -91,7 +95,7 @@ require_once './../config/crud.php';
                         <a  href ="formularioEncarregado.php" class="btn btn-menu"><i class="fas fa-download me-2"></i> Cadastrar Encarregado</a>
                     </div>
                     <div class="mt-5 p-5">
-                        <a href="" class="btn btn-menu mt-5">Sair</a>
+                        <a href="./../controller/sair.php" class="btn btn-menu mt-5">Sair</a>
                     </div>
                 </div>
             </div>

@@ -41,15 +41,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         insertAll($sqlDados, $dadosPessoais);
 
-        $msg[] = "<p>Usuario cadastrado com sucesso!</p>";
-        $_SESSION['mensagem'] = $msg;
-        header('Location: ../views/admin.php');
+        $msg = "<p>Usuario cadastrado com sucesso!</p>";
+        $_SESSION['success'] = $msg;
+        header('Location: ../views/professor.php');
         die();
     } else {
 
-        $error[] = "<p>Os dados não foram inseridos</p>";
+        $error = "<p>Os dados não foram inseridos</p>";
         $_SESSION['error'] = $error;
-        header('Location: ../views/admin.php');
+        header('Location: ../views/professor.php');
         die();
     }
 } 

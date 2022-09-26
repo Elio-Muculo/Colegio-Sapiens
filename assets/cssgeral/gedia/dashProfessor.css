@@ -56,24 +56,23 @@ body{
       margin-bottom: 15px;
       margin-left: 15px;
       box-sizing: border-box; 
-      text-align: center;
+      text-align: left;
       border:2px #fff solid;
       border-radius: 5px;
       padding: 5px;
   }
   
-  .links a:hover{
-    border:2px #3E9178 solid;
+  .links a:hover, .logout:hover{
+    background-color: #44c09b !important;
     color: #fff;
   }
 
-  .logout a{
+  .logout {
     color:white;
     display: block; 
-    width: 40%; 
+    width: 80%; 
     line-height: 20px;
     text-decoration: none;
-    margin-top: 60%;
     box-sizing: border-box; 
     text-align: center;
     border:2px #fff solid;

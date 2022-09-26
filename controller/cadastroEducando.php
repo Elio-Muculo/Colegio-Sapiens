@@ -22,12 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $inserted = insertAll("INSERT INTO educando (nome, apelido, encarregado_id, data_nascimento, genero, bairro, quarteirao, turma_id) VALUES (:nome, :apelido, :encarregado_id, :data_nascimento, :genero, :bairro, :quarteirao, :turma_id)", $dadosEducando);
     if ($inserted == 1) {
-        die("dado inserido com sucesso");
-        header('Location: ../views/admin.php');
-        die("dado inserido com sucesso");
+        $_SESSION['success'] = "<p>Os dados foram inseridos com sucesso.</p>";
+        header('Location: ../views/cadastroEducando.php');
     } else {
-        $error[] = "<p>Os dados não foram inseridos</p>";
-        $_SESSION['error'] = $error;
+        $_SESSION['error'] = "<p>Os dados não foram inseridos</p>";
         header('Location: ../views/cadastroEducando.php');
         die();
     }
