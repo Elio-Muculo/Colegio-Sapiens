@@ -133,7 +133,7 @@ require_once './../config/crud.php';
 
 
                                         <div class="col-md-3 col-lg-3 col-sm-12 text-center mx-1">
-                                            <button class="btn fw-bold btn btn-sm btn-outline-success w-75 h-100 but mt-3"> <a href="./admin.php"> Voltar</a></button>
+                                           <a href="./admin.php"> <button type="button" class="btn fw-bold btn btn-sm btn-outline-success w-75 h-100 but mt-3">  Voltar</button></a>
                                         </div>
 
                                         <div class="col-md-3 col-lg-3 col-sm-12  text-center ">
