@@ -1,4 +1,16 @@
 <?php 
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = 'O usuario não tem sessão iniciada no sistema.';
+    header('Location: ../index.php');
+}
+
+if($_SESSION['user_permission'] == 'encarregado') {
+    $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
+    header('Location: ../index.php');
+}
+
 require_once './../config/crud.php';
 ?>
 

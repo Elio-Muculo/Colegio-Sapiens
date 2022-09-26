@@ -1,5 +1,12 @@
 <?php 
 session_start();
+
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../index.php');
+}
+
+
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
