@@ -51,34 +51,34 @@ require_once './../config/crud.php';
                                     <form action="../controller/cadastroEducando.php" method="post" class=" row p-3">
                                         <p>Preencha os Campos</p>
 
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
-                                            <input type="text" name="nome" placeholder="Nome (UserName)" class="form-control ">
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text inputs"><i class="fa-solid fa-circle-user icon"></i></span>
+                                            <input type="text" name="nome" placeholder="Nome (UserName) *" class="form-control inputs ">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            <input type="text" name="apelido" placeholder="Apelido" class="form-control  ">
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text inputs"><i class="fas fa-user icon"></i></span>
+                                            <input type="text" name="apelido" placeholder="Apelido *" class="form-control inputs  ">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"><i class="fa-solid fa-house-user"></i></span>
-                                            <input type="text" name="bairro" placeholder="Bairro" class="form-control ">
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text inputs"><i class="fa-solid fa-house-user icon"></i></span>
+                                            <input type="text" name="bairro" placeholder="Bairro" class="form-control inputs">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"><i class="fa-sharp fa-solid fa-house"></i></span>
-                                            <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control">
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-house icon"></i></span>
+                                            <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control inputs">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"><i class="fa-regular fa-calendar-check"></i></span>
-                                            <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control ">
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text inputs"><i class="fa-regular fa-calendar-check icon"></i></span>
+                                            <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control inputs ">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            <select class="form-select " name="encarregado_id">
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text inputs"><i class="fa-solid fa-circle-user icon"></i></span>
+                                            <select class="form-select inputs " name="encarregado_id">
                                                 <option selected>Nome do Encarregado</option>
                                                 <?php 
                                                         $encarregado = readAll("SELECT * FROM encarregado");
@@ -92,9 +92,9 @@ require_once './../config/crud.php';
                                         </div>
 
                                         <div class="col-md-4 col-lg-4 col-sm-12">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="fa-sharp fa-solid fa-venus-mars"></i></span>
-                                                <select class="form-select" name="genero">
+                                            <div class="input-group mb-2">
+                                                <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-venus-mars icon"></i></span>
+                                                <select class="form-select inputs" name="genero">
                                                     <option selected>Genero</option>
                                                     <option value="M">M</option>
                                                     <option value="F">F</option>
@@ -104,9 +104,9 @@ require_once './../config/crud.php';
                                         
 
                                         <div class=" col-md-4 col-lg-4 col-sm-12">
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text"><i class="fa-sharp fa-solid fa-people-roof"></i></span>
-                                                <select class="form-select " name="turma_id">
+                                            <div class="input-group mb-2">
+                                                <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-people-roof icon"></i></span>
+                                                <select class="form-select inputs " name="turma_id">
                                                     <option selected>Nome da Turma </option>
                                                     <?php 
                                                         $turma = readAll("SELECT * FROM turma");
@@ -119,14 +119,17 @@ require_once './../config/crud.php';
                                                 </select>
                                             </div>
                                         </div>
-                                        <p>Campos com * s&atilde;o obrigatorios</p>
-
-                                        <div class="col-md-3 col-lg-3 col-sm-12 botao text-center mx-3 ">
-                                            <button class="btn fw-bold"> <a href="admin.php">Voltar</a></button>
+                                        <div class="mb-2 ">
+                                            Campos com <span class="p-1 text-danger fw-bold spanV">*</span> s&atilde;o obrigatorios
                                         </div>
 
-                                        <div class="col-md-3 col-lg-3 col-sm-12 botao text-center  ">
-                                            <button type="submit" class="btn fw-bold">Guardar</button>
+
+                                        <div class="col-md-3 col-lg-3 col-sm-12 text-center mx-1 ">
+                                            <button class="btn fw-bold btn-sm btn-outline-success w-75 h-100 but mt-3"> <a href="admin.php">Voltar</a></button>
+                                        </div>
+
+                                        <div class="col-md-3 col-lg-3 col-sm-12 text-center  ">
+                                            <button type="submit" class="btn fw-bold btn-sm btn-outline-success w-75 h-100 but mt-3">Guardar</button>
                                         </div>
 
 

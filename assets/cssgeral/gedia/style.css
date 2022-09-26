@@ -1,7 +1,7 @@
-/* Tela CadastroUser */
+/* Tela CadastroEducando e FormularioEncarregado */
 .telaP {
     background-color: #d9d9d9;
-    height: 100vh;
+    min-height: 100vh;
   }
  
   .centro{
@@ -50,6 +50,51 @@
   .btn a:hover{
     color: #3E9178;
   }
+
+.botao:hover{
+  background-color: #337460;
+}
+
+.icon {
+    color: #337460;
+}
+
+
+span{
+  background-color: #CCC8C7 !important;
+}
+
+.spanV{
+  background-color: #d9d9d9 !important;
+}
+
+.inputs {
+background-color: #CCC8C7;
+padding: .4rem 0 .4rem 2rem !important;
+}
+
+
+
+.form-control,
+.form-select {
+    background-color: #CCC8C7 !important;
+    transition: none;
+    border: none !important;
+    outline: 0 !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border: none;
+    box-shadow: none;
+    outline: 0 !important;
+    background-color: #CCC8C7 !important;
+}
+
+.but{   
+  border-radius: 12px !important;
+
+} 
   /* **************DashboardProfessor**************** */
   .header{
     background:#3E9178;
@@ -108,7 +153,8 @@
   
   .mtop{
     margin-top: 50px;
-  }
+    }
+
   img{
     width: 100%;
     height: 70px;
