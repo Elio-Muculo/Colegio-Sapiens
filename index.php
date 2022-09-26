@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html lang="en">
 
 <head>
@@ -34,7 +37,7 @@
                     <h3>Faca o Login</h3>
                 </div>
 
-                <?php session_start();
+                <?php 
                 if (isset($_SESSION['error'])) { ?>
                     <div class="alert alert-danger alert-dismissible mt-5 w-50 mx-auto" style="height: 50px; line-height: 15px">
                         <button class="btn-close" data-bs-dismiss='alert'></button>
@@ -52,12 +55,10 @@
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
-                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha" value="<?php if (isset($_COOKIE['senha'])) {
-                                                                                                                        echo $_COOKIE['senha'];
-                                                                                                                    } ?>" required>
+                        <input type="password" name="senha" class="form-control inputs" placeholder="Senha" required>
                     </div>
                     <div class="mb-3">
-                        <input type="checkbox" name="checar" class="form-check-input" <?php if (isset($_COOKIE['username']) && isset($_COOKIE['senha'])) { ?> checked <?php } ?>> <label for="lembrarcod"> Lembrar codigo</label>
+                        <input type="checkbox" name="checar" class="form-check-input" <?php if (isset($_COOKIE['username'])) { ?> checked <?php } ?>> <label for="lembrarcod"> Lembrar codigo</label>
 
 
                     </div>

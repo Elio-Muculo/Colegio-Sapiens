@@ -53,7 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $date_expire = strtotime("+1 Month", time());
 
                     setcookie('username', $dados['username'], $date_expire,"/");
-                    setcookie('senha', $_POST['senha'], $date_expire,  "/");
                 }
 
                 //caso o perfil seja professor
