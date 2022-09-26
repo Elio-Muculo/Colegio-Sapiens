@@ -46,54 +46,54 @@
                             <div class="row mt-0">
                                 <div class="col-sm-10 offset-sm-1  p-2">
                                     <h1 class="texto text-center mt-3">Formul&aacute;rio do Encarregado</h1>
-                                    <form action="./../controller/encarregado.php" method="post" class=" row p-3">
+                                    <form action="./../controller/encarregado.php" method="post" class=" row p-4 ">
                                         <p>Preencha os Campos</p>
 
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fa-solid fa-circle-user"></i></span>
-                                            <input type="text" name="nome" placeholder="Nome (UserName)" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fas fa-user-circle icon"></i></span>
+                                            <input type="text" name="nome" placeholder="Nome (UserName) *" class="form-control inputs">
                                         </div>
                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            <input type="text" name="apelido" placeholder="Apelido" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fas fa-user icon"></i></span>
+                                            <input type="text" name="apelido" placeholder="Apelido *" class="form-control inputs">
                                         </div>
                                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fas fa-lock icon"></i></span>
-                                            <input type="password" name="senha" placeholder="Senha" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fas fa-lock icon"></i></span>
+                                            <input type="password" name="senha" placeholder="Senha *" class="form-control inputs">
                                         </div>
 
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-                                            <input type="text" name="telefone" placeholder="Numero de Telefone" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fa-solid fa-phone icon"></i></span>
+                                            <input type="text" name="telefone" placeholder="Numero de Telefone *" class="form-control inputs">
                                         </div>
 
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fas fa-light fa-envelope"></i></span>
-                                            <input type="email" name="email" placeholder="Email" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fas fa-light fa-envelope icon"></i></span>
+                                            <input type="email" name="email" placeholder="Email *" class="form-control inputs">
                                         </div>
                                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fa-solid fa-house-user"></i></span>
-                                            <input type="text" name="bairro" placeholder="Bairro" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fa-solid fa-house-user icon"></i></span>
+                                            <input type="text" name="bairro" placeholder="Bairro" class="form-control inputs">
                                         </div>
                                     
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fa-sharp fa-solid fa-house"></i></span>
-                                            <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-house icon"></i></span>
+                                            <input type="text" name="quarteirao" placeholder="Quarteirao" class="form-control inputs">
                                         </div>
                                         
                                         <div class="input-group mb-2">
-                                            <span class="input-group-text"><i class="fa-regular fa-calendar-check"></i></span>
-                                            <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control">
+                                            <span class="input-group-text inputs"><i class="fa-regular fa-calendar-check icon"></i></span>
+                                            <input type="date" name="data_nascimento" placeholder="Data Nascimento" class="form-control inputs">
                                         </div>
                                     
 
-                                        <div class="col-md-4 col-lg-4 col-sm-12">
+                                        <div class="col-md-3 col-lg-3 col-sm-12">
                                             <div class="input-group mb-2">
-                                                <span class="input-group-text"><i class="fa-sharp fa-solid fa-venus-mars"></i></span>
-                                                <select class="form-select" name="genero">
+                                                <span class="input-group-text inputs"><i class="fa-sharp fa-solid fa-venus-mars icon"></i></span>
+                                                <select class="form-select inputs" name="genero">
                                                     <option selected>Genero</option>
                                                     <option value="M">M</option>
                                                     <option value="F">F</option>
@@ -101,14 +101,17 @@
                                             </div>
                                         </div>
 
-                                        <p>Campos com * s&atilde;o obrigatorios</p>
-
-                                        <div class="col-md-3 col-lg-3 col-sm-12 botao text-center mx-3">
-                                            <button class="btn fw-bold"> <a href="admin.php"> Voltar</a></button>
+                                        <div class="mb-2 ">
+                                            Campos com <span class="p-1 text-danger fw-bold spanV">*</span> s&atilde;o obrigatorios
                                         </div>
 
-                                        <div class="col-md-3 col-lg-3 col-sm-12 botao text-center ">
-                                            <button type="submit" class="btn fw-bold">Guardar</button>
+
+                                        <div class="col-md-3 col-lg-3 col-sm-12 text-center mx-1">
+                                            <button class="btn fw-bold btn btn-sm btn-outline-success w-75 h-100 but mt-3"> <a href="admin.php"> Voltar</a></button>
+                                        </div>
+
+                                        <div class="col-md-3 col-lg-3 col-sm-12  text-center ">
+                                            <button type="submit" class="btn fw-bold btn btn-sm btn-outline-success w-75 h-100 but mt-3">Cadastrar</button>
                                         </div>
                                     </form>
                                 </div>
