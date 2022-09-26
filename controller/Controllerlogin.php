@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'username' => $_POST['nome'],
     ];
 
+    echo "$ ";
+
     //consulta para verificar se o user existe na bd e retornar 1 ou mais caso existe
     $sql = "SELECT * FROM usuario WHERE username = :username";
     $usuarioExiste = countRow($sql, $data);

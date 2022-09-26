@@ -41,9 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ];
         
         insertAll("INSERT INTO encarregado (nome, apelido, telefone, bairro, quarteirao, email, genero, data_nascimento, user_id) VALUES (:nome, :apelido, :telefone, :bairro, :quarteirao, :email, :genero, :data_nascimento, :user_id)", $dadosEncarregado);
-        die("dado inserido com sucesso");
-        header('Location: ../views/formularioEncarregado.php');
-        die("dado inserido com sucesso");
+        header('Location: ../views/admin.php');
+        //die("dado inserido com sucesso");
+        $_SESSION['msg'] = "O encarregado foi criado com sucesso";
+        header('Location: ../views/admin.php');
+        die();
     } else {
         $error[] = "<p>Os dados não foram inseridos</p>";
         $_SESSION['error'] = $error;

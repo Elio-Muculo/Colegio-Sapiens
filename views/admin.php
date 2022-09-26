@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <html lang="en">
 
 <head>
@@ -14,6 +18,8 @@
     <nav class="navbar navbar-expand-lg bg-nav ">
         <div>
     <a class="navbar-brand CSP"><h4>cSP</h4></a></div>
+    
+  
         <div class="container-fluid">
       
             <!--offcanvas trigger-->
@@ -27,7 +33,16 @@
               <span> <i class="fas fa-bars"></i></span>
             
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent s" >
+            
+                  <?php 
+                if (isset($_SESSION['msg'])) :
+                    echo "<h6>" .$_SESSION['msg']."</h6>";
+                    unset($_SESSION['msg']);
+                endif;
+            ?>
+          
+           
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
 
                 </ul>
@@ -35,6 +50,7 @@
                     <li class="nav-item ">
                         <a class="nav-link text-white" href="#" role="button">
                             Administrador <i class="fas fa-user"></i>
+              
                         </a>
 
                     </li>
@@ -74,6 +90,7 @@
     <!--o conteudo da pagina fica aqui-->
     <main class="p-1">
     <img src="../assets/img/admin.jpeg" alt=""  width="100%" class="img">
+  
     </main>
 
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
