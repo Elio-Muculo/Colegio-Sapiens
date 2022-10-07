@@ -6,7 +6,8 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: ../index.php');
 }
 
-if($_SESSION['user_permission'] == 'encarregado') {
+
+if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission'] = 'admin') {
     $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
     header('Location: ../index.php');
 }
