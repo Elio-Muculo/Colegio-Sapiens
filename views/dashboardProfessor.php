@@ -29,43 +29,14 @@ $professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SE
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
-<body>
-
+<body> 
     <div class="container-fluid header clearfix">
-<<<<<<< HEAD
-          <!-- <h4 class="text-white float-start mx-3">CSP</h4>
-        <p class="text-white float-end mx-5">Nome do Professor<i class="fa-solid fa-circle-user"></p> -->
-         
-           <div class="float-start text-white mx-2 ">
-               <h3 >C<span class="fw-bold ">SP</span></h3>
-            </div>
-
-            <div class="float-end text-white fw-bold mx-2">
-              <p>Nome do Professor<i class="fas fa-user"></i></p>
-            </div>
-=======
         <h4 class="text-white float-start mx-3">CSP</h4>
         <p class="text-white float-end mx-5">Bem - vindo, <?php echo $professor['nome'] . " " . $professor['apelido'] ?><i class=""></p>
->>>>>>> 46ef885ce257c4982284402083bda495f6e1fcc9
     </div>
 
     <div class="container-fluid bod d-flex flex-row py-0 ">
 
-<<<<<<< HEAD
-        <div class="container col-lg-3 d-flex flex-column menu text-center contai">
-        <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
-           <div class="links">
-           <a href="agendarreuniao.php"><span clas="input-group-text"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Agendar reuniao</a>
-           <a href="lancarNotas.php"><span clas="input-group-text"><i class="fa-regular fa-pen-to-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Lancar notas</a>
-           <a href="visualizarDados.php"><span clas="input-group-text"><i class="fa-solid fa-calendar-week"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Visualizar dados</a>
-           <a href="solicitarReuniao"><span clas="input-group-text"><i class="fa-regular fa-lightbulb"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Solicitar reuniao</a>
-           <a href="confirmarReuniao"><span clas="input-group-text"><i class="fa-regular fa-lightbulb"></i>&nbsp;&nbsp;</span>Confirmar reuniao</a>
-           
-           <div class="logout">
-              <a href="../index.php" class="logout fw-bold">Sair</a>
-            </div>
-            
-=======
         <div class="container col-lg-3 d-flex flex-column menu text-center align-items-center">
         <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
            <div class="links align-items-center justify-content-center">
@@ -78,8 +49,6 @@ $professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SE
            <!-- <div class="logout"> -->
               <a href="../controller/sair.php" class="logout fw-bold mt-5 text-center" style="margin-top: 100px !important;">Sair</a>
             <!-- </div> -->
-
->>>>>>> 46ef885ce257c4982284402083bda495f6e1fcc9
            </div> 
            
         </div>

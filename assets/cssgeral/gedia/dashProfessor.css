@@ -1,4 +1,4 @@
-body{
+/* body{
     overflow: hidden;
     background-image: url(../../img/grafico.jpeg);
     background-repeat: no-repeat;
@@ -7,7 +7,8 @@ body{
     margin: 0;
     padding: 0;
     
-}
+} */
+
 .header {
     background-color: #3E9178;
     height: 50px;
@@ -27,27 +28,27 @@ body{
 }
 
 
-.bod{
+.body{
    position: relative;
    top: -15px;
    height: 100vh;
    
 }
 
-.contai{
+/* .contai{
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
 
    
-}
+} */
 
 .img{
-    /* background-image: url(../../img/grafico.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: border-box; */
-    width: 100%;
+    background-image: url(../../img/grafico.jpeg);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-clip: border-box; 
+    /* width: 100%; */
     
 
 }
@@ -59,7 +60,7 @@ body{
 }
 
 .img div img{
-    width: 340px;
+    width: 250px;
 } 
 
 .links{
