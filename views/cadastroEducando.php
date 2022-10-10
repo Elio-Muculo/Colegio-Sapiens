@@ -77,7 +77,7 @@ require_once './../config/crud.php';
 
                                         <div class="input-group mb-2">
                                             <span class="input-group-text inputs"><i class="fa-solid fa-circle-user icon"></i></span>
-                                            <input type="text" name="nome" placeholder="Nome (UserName) *" class="form-control inputs ">
+                                            <input type="text" name="nome" placeholder="Nome (UserName) *" class="form-control inputs " required>
                                         </div>
 
                                         <div class="input-group mb-2">

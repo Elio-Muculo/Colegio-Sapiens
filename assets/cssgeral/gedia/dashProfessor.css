@@ -28,40 +28,18 @@
 }
 
 
-.body{
-   position: relative;
-   top: -15px;
-   height: 100vh;
-   
-}
-
-/* .contai{
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-
-   
-} */
-
 .img{
     background-image: url(../../img/grafico.jpeg);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-clip: border-box; 
-    /* width: 100%; */
-    
-
 }
 
 .img div{
-    width: 32%;
     height: 30%;
     display: flex;
 }
 
-.img div img{
-    width: 250px;
-} 
 
 .links{
     width: 100%;

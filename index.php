@@ -58,7 +58,7 @@ session_start();
                         <input type="password" name="senha" class="form-control inputs" placeholder="Senha" required>
                     </div>
                     <div class="mb-3">
-                        <input type="checkbox" name="checar" class="form-check-input" <?php if (isset($_COOKIE['username'])) { ?> checked <?php } ?>> <label for="lembrarcod"> Lembrar senha</label>
+                        <input type="checkbox" name="checar" class="form-check-input" <?php if (isset($_COOKIE['username'])) { ?> checked <?php } ?>> <label for="lembrarcod"> Lembrar de mim</label>
 
 
                     </div>

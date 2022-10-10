@@ -6,8 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: ../index.php');
 }
 
-
-if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission'] = 'admin') {
+if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission'] == 'admin') {
     $_SESSION['error'] = 'O usuario não tem permissão para aceder a essa área.';
     header('Location: ../index.php');
 }
@@ -15,8 +14,7 @@ if($_SESSION['user_permission'] == 'encarregado' || $_SESSION['user_permission']
 require_once './../config/crud.php';
 
 
-$professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SESSION['user_id']]);
-?>
+$professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SESSION['user_id']]);?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +30,12 @@ $professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SE
 
 <body> 
     <div class="container-fluid header clearfix">
-        <h4 class="text-white float-start mx-3">CSP</h4>
+        <a href="#">
+        <h4 class="text-white float-start mx-3 mt-2">CSP</h4></a>
         <p class="text-white float-end mx-5">Bem - vindo, <?php echo $professor['nome'] . " " . $professor['apelido'] ?><i class=""></p>
     </div>
 
-    <div class="container-fluid bod d-flex flex-row py-0 ">
+    <div class="container-fluid bod d-flex flex-row inset-0" style="margin: 0 !important; padding: 0 !important; height: 88vh !important;">
 
         <div class="container col-lg-3 d-flex flex-column menu text-center align-items-center">
         <h5 class="mt-3 text-white me-5 p-3">Selecione uma op&ccedil;&atilde;o</h5>
@@ -60,7 +59,7 @@ $professor = readOne("SELECT * FROM professor WHERE userId = :id", ['id' => $_SE
            <div>
                 <img src="../assets/img/alunos1.jpeg" alt="" class="img-fluid">
             </div>
-            <div>
+            <div class="mx-2">
                 <img src="../assets/img/alunos2.jpeg" alt="" class="img-fluid">
             </div>
             <div>

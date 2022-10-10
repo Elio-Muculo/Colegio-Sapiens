@@ -33,7 +33,7 @@ $admin = readOne("SELECT * FROM usuario WHERE codigo = :id", ['id' => $_SESSION[
 <body class="body">
     <nav class="navbar navbar-expand-lg bg-nav container">
         <div>
-    <a class="navbar-brand CSP"><h4>cSP</h4></a></div>
+    <a class="navbar-brand CSP"><h4>CSP</h4></a></div>
     
   
         <div class="container-fluid">
@@ -88,7 +88,7 @@ $admin = readOne("SELECT * FROM usuario WHERE codigo = :id", ['id' => $_SESSION[
 
                 </div>
                 <div class="p-0 mt-5">
-                    <div class="text-white text-center">Selecione uma opcao</div>
+                    <div class="text-white text-center">Selecione uma opção</div>
                     <div class="p-4 text-center">
                         <a href="professor.php"  class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Professor</a>
                         <a href="cadastroEducando.php"  class="btn btn-menu mb-2"><i class="fas fa-download me-2"></i> Cadastrar Educando</a>
