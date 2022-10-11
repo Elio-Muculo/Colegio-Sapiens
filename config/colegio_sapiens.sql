@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Set-2022 às 18:49
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.6
+-- Generation Time: Oct 11, 2022 at 08:28 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `colegio`
+-- Database: `colegio_sapiens`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `classe`
+-- Table structure for table `classe`
 --
 
 CREATE TABLE `classe` (
@@ -34,7 +34,7 @@ CREATE TABLE `classe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `classe`
+-- Dumping data for table `classe`
 --
 
 INSERT INTO `classe` (`codigo`, `numero_turmas`, `nome_classe`) VALUES
@@ -50,7 +50,7 @@ INSERT INTO `classe` (`codigo`, `numero_turmas`, `nome_classe`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `classe_disciplina`
+-- Table structure for table `classe_disciplina`
 --
 
 CREATE TABLE `classe_disciplina` (
@@ -59,7 +59,7 @@ CREATE TABLE `classe_disciplina` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `classe_disciplina`
+-- Dumping data for table `classe_disciplina`
 --
 
 INSERT INTO `classe_disciplina` (`classe_cod`, `disciplina_cod`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `classe_disciplina` (`classe_cod`, `disciplina_cod`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `disciplina`
+-- Table structure for table `disciplina`
 --
 
 CREATE TABLE `disciplina` (
@@ -82,7 +82,7 @@ CREATE TABLE `disciplina` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `disciplina`
+-- Dumping data for table `disciplina`
 --
 
 INSERT INTO `disciplina` (`codigo`, `nome`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `disciplina` (`codigo`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `educando`
+-- Table structure for table `educando`
 --
 
 CREATE TABLE `educando` (
@@ -110,19 +110,27 @@ CREATE TABLE `educando` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `educando`
+-- Dumping data for table `educando`
 --
 
 INSERT INTO `educando` (`codigo`, `nome`, `apelido`, `encarregado_id`, `data_nascimento`, `genero`, `bairro`, `quarteirao`, `turma_id`) VALUES
 (1, 'Hidelgio', 'Novela', 2, '2022-09-24 16:44:19', '', '1 de Maio', '13', 1),
 (2, 'Jose', 'Langa', 1, '2022-09-24 16:44:19', '', 'T-3', '2', 2),
 (3, 'Sidio', 'Novela', 2, '2022-09-24 16:45:52', '', '1 de Maio', '13', 4),
-(4, 'Sónia ', 'Langa', 1, '2022-09-24 16:45:52', '', 'T-3', '5', 2);
+(4, 'Sónia ', 'Langa', 1, '2022-09-24 16:45:52', '', 'T-3', '5', 2),
+(5, 'Dinho', 'Muculo', 1, '2022-09-07 00:00:00', 'M', 'Matola', '23', 2),
+(6, 'Dinho', 'Muculo', 1, '2022-09-07 00:00:00', 'M', 'Matola', '23', 2),
+(7, 'Dinhp', 'Fabiao', 2, '4311-03-12 00:00:00', 'M', 'matola', '31', 1),
+(8, 'Dinho', 'Fabiao', 8, '0001-12-01 00:00:00', 'M', 'matola', '31', 1),
+(9, 'alvaro', 'Fabiao', 1, '0011-12-12 00:00:00', 'M', 'matola', '31', 1),
+(10, 'filipe', 'Fabiao', 1, '2120-12-12 00:00:00', 'M', 'matola', '31', 1),
+(11, 'Dinhp', 'Fabiao', 2, '0112-02-21 00:00:00', 'M', 'matola', '31', 1),
+(13, 'Dinho', 'Fabiao', 13, '2022-09-20 00:00:00', 'M', 'matola', '31', 3);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `encarregado`
+-- Table structure for table `encarregado`
 --
 
 CREATE TABLE `encarregado` (
@@ -139,20 +147,25 @@ CREATE TABLE `encarregado` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `encarregado`
+-- Dumping data for table `encarregado`
 --
 
 INSERT INTO `encarregado` (`codigo`, `nome`, `apelido`, `telefone`, `bairro`, `quarteirao`, `email`, `genero`, `data_nascimento`, `user_id`) VALUES
 (1, 'Maria', 'Langa', '842759368', 'Malhazine', '12', 'maria@gmail.com', 'F', '1990-09-24 16:05:42', 2),
 (2, 'Tania', 'Malate', '824569875', 'Zona Verde', '19', 'tania@gmail.com', 'F', '1980-09-24 16:08:16', 4),
-(4, 'Elio', 'muculo', '842644623', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-21 00:00:00', 13),
-(5, 'Dark', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-28 00:00:00', 14),
-(6, 'Dark', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-28 00:00:00', 15);
+(7, 'elio', '', '', '', '', '', 'G', '0000-00-00 00:00:00', 17),
+(8, 'justino', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-23 00:00:00', 18),
+(9, 'justino', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '2022-09-16 00:00:00', 19),
+(10, 'lucas', 'muculo', '83307261', 'Machava', '31', 'emuculo25@gmail.com', 'M', '0000-00-00 00:00:00', 20),
+(11, 'pedro', 'mateus', '842644623', 'matola', '31', 'emuculo25@gmail.com', 'M', '0000-00-00 00:00:00', 21),
+(12, 'alvaro', 'mateus', '83217612', 'matola', '31', 'emuculo25@gmail.com', 'M', '0000-00-00 00:00:00', 23),
+(13, 'filipe', 'Fabiao', '1212', 'Matola', '31', 'qmake65@gmail.com', 'F', '0000-00-00 00:00:00', 25),
+(14, 'filipe', 'Fabiao', '1212', 'matola', '31', 'qmake65@gmail.com', 'M', '0120-02-12 00:00:00', 26);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nota`
+-- Table structure for table `nota`
 --
 
 CREATE TABLE `nota` (
@@ -167,7 +180,7 @@ CREATE TABLE `nota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `nota`
+-- Dumping data for table `nota`
 --
 
 INSERT INTO `nota` (`codigo`, `prof_id`, `educa_id`, `nota1`, `nota2`, `trabalho1`, `trabalho2`, `apt`) VALUES
@@ -179,7 +192,7 @@ INSERT INTO `nota` (`codigo`, `prof_id`, `educa_id`, `nota1`, `nota2`, `trabalho
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `professor`
+-- Table structure for table `professor`
 --
 
 CREATE TABLE `professor` (
@@ -195,19 +208,23 @@ CREATE TABLE `professor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `professor`
+-- Dumping data for table `professor`
 --
 
 INSERT INTO `professor` (`codigo`, `nome`, `apelido`, `numero_BI`, `experiencia`, `formacao`, `quarteirao`, `genero`, `userId`) VALUES
 (2, 'Manuel', 'Batista', '123456789H', '2 anos', 'Matemática ', '13', 'M', 1),
 (3, 'Vasco', 'Sozinho', '123459876F', '10 anos', 'Geografia', '5', 'M', 3),
 (4, 'Amélia ', 'Guambe', '123400789A', '5 anos', 'Gestão ', '4', 'F', 5),
-(5, 'Fátima ', 'Bacela', '123459876K', '6 anos', 'História ', '10', 'F', 6);
+(5, 'Fátima ', 'Bacela', '123459876K', '6 anos', 'História ', '10', 'F', 6),
+(6, 'elio', 'muculo', '1001217N', '2', 'Matematica', '32', 'M', 16),
+(7, 'filipe', 'mateus', '1212187612', '2', 'matematica', '31', 'M', 22),
+(8, 'primo', 'Fabiao', '12751725817', '12', 'Matematica', '31', 'M', 24),
+(9, 'Agnaldo', 'Massango', '100101287N', '2', 'Matem', '31', 'M', 27);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `professor_disciplina`
+-- Table structure for table `professor_disciplina`
 --
 
 CREATE TABLE `professor_disciplina` (
@@ -216,7 +233,7 @@ CREATE TABLE `professor_disciplina` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `professor_disciplina`
+-- Dumping data for table `professor_disciplina`
 --
 
 INSERT INTO `professor_disciplina` (`profe_id`, `disciplina_id`) VALUES
@@ -228,7 +245,7 @@ INSERT INTO `professor_disciplina` (`profe_id`, `disciplina_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `reuniao`
+-- Table structure for table `reuniao`
 --
 
 CREATE TABLE `reuniao` (
@@ -240,10 +257,35 @@ CREATE TABLE `reuniao` (
   `encarregado_cod` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `reuniao`
+--
+
+INSERT INTO `reuniao` (`codigo`, `tipo`, `assunto`, `data`, `professor_cod`, `encarregado_cod`) VALUES
+(3, 'Urgente', 'Lucas bateu no docente', '2022-09-28 00:00:00', 7, 2),
+(4, 'Extra-ordinaria', 'Lucas bateu no docente', '2022-09-07 00:00:00', 7, 2),
+(5, 'Extra-ordinaria', 'Lucas bateu no docente', '2022-09-07 00:00:00', 7, 2),
+(6, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(7, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(8, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(9, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(10, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(11, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(12, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(13, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(14, 'Ordinaria', 'Lucas bateu no docente', '2022-09-05 00:00:00', 7, 12),
+(15, 'Ordinaria', 'Tommorow we are gonna make it', '2022-09-16 00:00:00', 7, 8),
+(16, 'Ordinaria', 'Tommorow we are gonna make it', '2022-09-29 00:00:00', 7, 2),
+(17, 'Ordinaria', 'Tommorow we are gonna make it', '2022-09-29 00:00:00', 7, 7),
+(18, 'Ordinaria', 'Tommorow we are testing the app', '2022-09-28 00:00:00', 7, 7),
+(19, 'Ordinaria', 'Tommorow we are testing the app', '2022-10-06 00:00:00', 7, 12),
+(28, 'Ordinaria', 'Tommorow we are testing the app', '2022-10-05 00:00:00', 7, 12),
+(29, 'Ordinaria', 'Notas', '2022-09-30 00:00:00', 7, 11);
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `turma`
+-- Table structure for table `turma`
 --
 
 CREATE TABLE `turma` (
@@ -256,7 +298,7 @@ CREATE TABLE `turma` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `turma`
+-- Dumping data for table `turma`
 --
 
 INSERT INTO `turma` (`codigo`, `nome`, `numero_educandos`, `turno`, `Classe_id`, `professor_id`) VALUES
@@ -268,7 +310,7 @@ INSERT INTO `turma` (`codigo`, `nome`, `numero_educandos`, `turno`, `Classe_id`,
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -280,7 +322,7 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `usuario`
+-- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`codigo`, `username`, `senha`, `perfil`, `estado`) VALUES
@@ -291,40 +333,46 @@ INSERT INTO `usuario` (`codigo`, `username`, `senha`, `perfil`, `estado`) VALUES
 (5, 'Amelia ', '1234', 'professor', '1'),
 (6, 'Fatima', '1234', 'professor', '1'),
 (7, NULL, '$2y$10$IyRpqFyTHW0ilKUq7VyOne5KbKeOOubbHHVts1TzySAnpWtt9O3oa', 'encarregado', '1'),
-(8, 'Elio', '$2y$10$txCyvePf5YhX4T4D3VtDGu9bfx3nZvhjUN.cdnQtavHTH/LjHAKpq', 'encarregado', '1'),
-(9, 'Elio', '$2y$10$bMgaSx/g9ggpResxzRZ2K.nTzAAxiIxc57BXvPaeGdqrunhRJSf/6', 'encarregado', '1'),
-(10, 'Elio', '$2y$10$WyO3oy2g3j8N/wE6Xr5QzetUjshgHrwmMtM9Y8A2Qwrg.l7vSKRN6', 'encarregado', '1'),
-(11, 'Elio', '$2y$10$syrtCLXhMad7JOUF/Ynu.O9iC5KcGYuMQmL.otb92ePwpM8X9u82O', 'encarregado', '1'),
-(12, 'Elio', '$2y$10$m6x6v3fmGMAGZ5fq1BFXRebwn6fW9T/qmU.Kzn4noG1LwPF6OneZW', 'encarregado', '1'),
-(13, 'Elio', '$2y$10$aU3X7Qtuy47Y4lpOoHkO2.09BtvZyrlZ8tlg9c0PVbPvV4sLWbn5O', 'encarregado', '1'),
 (14, 'Dark', '$2y$10$HKobKXiroLFkYcmKRQBrlei5V8qMl7KIHv2WoTl.kD7gwloTozqDO', 'encarregado', '1'),
-(15, 'Dark', '$2y$10$1dSeK0PxW.z9cQfcWj3Pj.MErvpmvA10NOUrizzhYPL58h5b5wV42', 'encarregado', '1');
+(15, 'Dark', '$2y$10$1dSeK0PxW.z9cQfcWj3Pj.MErvpmvA10NOUrizzhYPL58h5b5wV42', 'encarregado', '1'),
+(16, 'elio', '$2y$10$UhzIYSn3KtCivKR/LcCsn.wc7IIsVb3Sg7QkScM/sXT6VwdGo9EQ.', 'professor', '1'),
+(17, 'elio', '$2y$10$IVu5ZjnjsSa3zIQupch62OK5zenrqTYL/tDfI2URr/TIodkKBhbTe', 'encarregado', '1'),
+(18, 'justino', '$2y$10$IGx1kbXUv7nCuizitY0PEOUR1hTKo5KwAKu6eyjMwkgfsJoA0v7YW', 'encarregado', '1'),
+(19, 'justino', '$2y$10$KT9rrxJ60DCB6VqUqVbwXOESGLWbFZSVZb3Is0MeRfSUrLHSceSv.', 'encarregado', '1'),
+(20, 'lucas', '$2y$10$oGNNenWzcK4ZS1aiJV19NuQtfMHNEHn1edehd9iDDhR2XNyiSfrU.', 'encarregado', '1'),
+(21, 'pedro', '$2y$10$FNgJNRqI7Rg139eJpreRT.qBbyw0mhadqCDkl9rdl4aj3PckQwHy.', 'encarregado', '1'),
+(22, 'filipe', '$2y$10$uOP/VnvKfpQ4gfdGZs7gd.bu25WkqFlIJ2wczBMIb9tbMpykrrID6', 'professor', '1'),
+(23, 'alvaro', '$2y$10$W5YSWElP4ccC9CspvK/1ZuzgeMvGvWVZOtjMz6WNn6/ti6HxHiHKy', 'admin', '1'),
+(24, 'primo', '$2y$10$cSFH/Dj9u3kjVinS7QuiAeuRX3x5V0Wq5a1AgEEqyE.Daxoj5xGJq', 'professor', '1'),
+(25, 'filipe', '$2y$10$eKX6oforXYiHd/Vp9KFZJu7bQSjD9SuDCYVIvRxnhQ7AditR/T5bm', 'encarregado', '1'),
+(26, 'filipe', '$2y$10$vOBBI3ONVy8junkPlcir4uHVi.kW.N.GPoN6Et//5onMv.8joHq.y', 'encarregado', '1'),
+(27, 'Agnaldo', '$2y$10$2XpsIfUXChdF6MSojQrnZesLKdkIHzk5bARTnT/R6FRn0iY/1M8am', 'professor', '1');
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `classe`
+-- Indexes for table `classe`
 --
 ALTER TABLE `classe`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices para tabela `classe_disciplina`
+-- Indexes for table `classe_disciplina`
 --
 ALTER TABLE `classe_disciplina`
   ADD KEY `classe_cod` (`classe_cod`),
   ADD KEY `disciplina_cod` (`disciplina_cod`);
 
 --
--- Índices para tabela `disciplina`
+-- Indexes for table `disciplina`
 --
 ALTER TABLE `disciplina`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices para tabela `educando`
+-- Indexes for table `educando`
 --
 ALTER TABLE `educando`
   ADD PRIMARY KEY (`codigo`),
@@ -332,14 +380,14 @@ ALTER TABLE `educando`
   ADD KEY `turma_id` (`turma_id`);
 
 --
--- Índices para tabela `encarregado`
+-- Indexes for table `encarregado`
 --
 ALTER TABLE `encarregado`
   ADD PRIMARY KEY (`codigo`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Índices para tabela `nota`
+-- Indexes for table `nota`
 --
 ALTER TABLE `nota`
   ADD PRIMARY KEY (`codigo`),
@@ -347,21 +395,21 @@ ALTER TABLE `nota`
   ADD KEY `educa_id` (`educa_id`);
 
 --
--- Índices para tabela `professor`
+-- Indexes for table `professor`
 --
 ALTER TABLE `professor`
   ADD PRIMARY KEY (`codigo`),
   ADD KEY `userId` (`userId`);
 
 --
--- Índices para tabela `professor_disciplina`
+-- Indexes for table `professor_disciplina`
 --
 ALTER TABLE `professor_disciplina`
   ADD KEY `profe_id` (`profe_id`),
   ADD KEY `disciplina_id` (`disciplina_id`);
 
 --
--- Índices para tabela `reuniao`
+-- Indexes for table `reuniao`
 --
 ALTER TABLE `reuniao`
   ADD PRIMARY KEY (`codigo`),
@@ -369,7 +417,7 @@ ALTER TABLE `reuniao`
   ADD KEY `encarregado_cod` (`encarregado_cod`);
 
 --
--- Índices para tabela `turma`
+-- Indexes for table `turma`
 --
 ALTER TABLE `turma`
   ADD PRIMARY KEY (`codigo`),
@@ -377,122 +425,122 @@ ALTER TABLE `turma`
   ADD KEY `professor_id` (`professor_id`);
 
 --
--- Índices para tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `classe`
+-- AUTO_INCREMENT for table `classe`
 --
 ALTER TABLE `classe`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de tabela `disciplina`
+-- AUTO_INCREMENT for table `disciplina`
 --
 ALTER TABLE `disciplina`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de tabela `educando`
+-- AUTO_INCREMENT for table `educando`
 --
 ALTER TABLE `educando`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT de tabela `encarregado`
+-- AUTO_INCREMENT for table `encarregado`
 --
 ALTER TABLE `encarregado`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT de tabela `nota`
+-- AUTO_INCREMENT for table `nota`
 --
 ALTER TABLE `nota`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de tabela `professor`
+-- AUTO_INCREMENT for table `professor`
 --
 ALTER TABLE `professor`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `reuniao`
+-- AUTO_INCREMENT for table `reuniao`
 --
 ALTER TABLE `reuniao`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT de tabela `turma`
+-- AUTO_INCREMENT for table `turma`
 --
 ALTER TABLE `turma`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- Restrições para despejos de tabelas
+-- Constraints for dumped tables
 --
 
 --
--- Limitadores para a tabela `classe_disciplina`
+-- Constraints for table `classe_disciplina`
 --
 ALTER TABLE `classe_disciplina`
   ADD CONSTRAINT `classe_cod` FOREIGN KEY (`classe_cod`) REFERENCES `classe` (`codigo`),
   ADD CONSTRAINT `disciplina_cod` FOREIGN KEY (`disciplina_cod`) REFERENCES `disciplina` (`codigo`);
 
 --
--- Limitadores para a tabela `educando`
+-- Constraints for table `educando`
 --
 ALTER TABLE `educando`
   ADD CONSTRAINT `encarregado_id` FOREIGN KEY (`encarregado_id`) REFERENCES `encarregado` (`codigo`),
   ADD CONSTRAINT `turma_id` FOREIGN KEY (`turma_id`) REFERENCES `turma` (`codigo`);
 
 --
--- Limitadores para a tabela `encarregado`
+-- Constraints for table `encarregado`
 --
 ALTER TABLE `encarregado`
   ADD CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `usuario` (`codigo`);
 
 --
--- Limitadores para a tabela `nota`
+-- Constraints for table `nota`
 --
 ALTER TABLE `nota`
   ADD CONSTRAINT `educa_id` FOREIGN KEY (`educa_id`) REFERENCES `educando` (`codigo`),
   ADD CONSTRAINT `prof_id` FOREIGN KEY (`prof_id`) REFERENCES `professor` (`codigo`);
 
 --
--- Limitadores para a tabela `professor`
+-- Constraints for table `professor`
 --
 ALTER TABLE `professor`
   ADD CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `usuario` (`codigo`);
 
 --
--- Limitadores para a tabela `professor_disciplina`
+-- Constraints for table `professor_disciplina`
 --
 ALTER TABLE `professor_disciplina`
   ADD CONSTRAINT `disciplina_id` FOREIGN KEY (`disciplina_id`) REFERENCES `disciplina` (`codigo`),
   ADD CONSTRAINT `profe_id` FOREIGN KEY (`profe_id`) REFERENCES `professor` (`codigo`);
 
 --
--- Limitadores para a tabela `reuniao`
+-- Constraints for table `reuniao`
 --
 ALTER TABLE `reuniao`
   ADD CONSTRAINT `encarregado_cod` FOREIGN KEY (`encarregado_cod`) REFERENCES `encarregado` (`codigo`),
   ADD CONSTRAINT `professor_cod` FOREIGN KEY (`professor_cod`) REFERENCES `professor` (`codigo`);
 
 --
--- Limitadores para a tabela `turma`
+-- Constraints for table `turma`
 --
 ALTER TABLE `turma`
   ADD CONSTRAINT `Classe_id` FOREIGN KEY (`Classe_id`) REFERENCES `classe` (`codigo`),
