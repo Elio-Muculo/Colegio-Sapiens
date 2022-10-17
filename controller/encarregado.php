@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ];
 
 
-    $sql = "INSERT INTO Usuario (username, senha, perfil, estado) VALUES (:username, :senha, :perfil, :estado)";
+    $sql = "INSERT INTO usuario (username, senha, perfil, estado) VALUES (:username, :senha, :perfil, :estado)";
     $inserted = insertAll($sql, $dadosEncarregadoUser);
     if ($inserted == 1) {
         // pegamos o id do usuario que foi adicionado em cima. 

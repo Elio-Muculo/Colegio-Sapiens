@@ -11,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'username' => $_POST['nome'],
     ];
 
-    echo "$ ";
 
     //consulta para verificar se o user existe na bd e retornar 1 ou mais caso existe
     $sql = "SELECT * FROM usuario WHERE username = :username";
@@ -27,10 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // verifica se a senha da Db e igual inserida e retorna a senha caso verdade
         // retorna null caso senhas incompativeis
         $senhaVerificada = password_verify($senha, $senhaUser) ? $senhaUser : null;
-
         //se retornar null da senha significa senhas diferentes
         // retornar para login com messagem de senhas erradas
         if ($senhaVerificada != null) {
+
             // chegou aqui porque a senha inserida e igual da base dados
             // verificar se existe um usuario com nome, senha e estado activo na base dados
             $sql = "SELECT * FROM usuario WHERE username = :username AND senha = :senha AND estado = :estado";
@@ -44,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // um determinado perfil 
             $contaVerificada = countRow($sql, $data);
             if ($contaVerificada == 1) {
-
                 // pegar os dados desse usuario para poder redirecionar no lugar certo
                 $dados = readOne($sql, $data);
 
@@ -75,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         //caso o perfil seja encarregado
                         $_SESSION['user_id'] = $dados['codigo'];
                         $_SESSION['user_permission'] = $dados['perfil'];
-                        header("location:../views/dashboardEncarregado.php");
+                        header("location: ../views/dashboardEncarregado.php");
                         die();
                     }
                 }
